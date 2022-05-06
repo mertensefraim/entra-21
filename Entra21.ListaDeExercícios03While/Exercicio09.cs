@@ -16,7 +16,9 @@ namespace Entra21.ListaDeExercícios03While
             {
                 if(indice != 0)
                 {
-                    numeroFatorial = numeroUsuario * (numeroUsuario - 1);
+                    int numeroUsuarioMenos = numeroUsuario - 1;
+                    numeroFatorial = numeroUsuario * numeroUsuarioMenos;
+                    numeroUsuario = numeroUsuarioMenos;
                 }
 
                 indice = indice + 1;
