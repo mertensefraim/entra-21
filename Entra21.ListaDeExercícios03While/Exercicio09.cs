@@ -11,18 +11,19 @@ namespace Entra21.ListaDeExercícios03While
         public void Executar()
         {
             Console.Write("Digite um número: ");
-            int numeroUsuario = Convert.ToInt32(Console.ReadLine()), indice = 0, fatorialResultado = 0, numeroFatorial = 0;
-            while(indice < numeroUsuario)
+            int numeroUsuario = Convert.ToInt32(Console.ReadLine());
+            int indice = 0, fatorialResultado = numeroUsuario, numeroFatorial = 0;
+            while (indice < numeroUsuario)
             {
                 if(indice != 0)
                 {
-                    int numeroUsuarioMenos = numeroUsuario - 1;
-                    numeroFatorial = numeroUsuario * numeroUsuarioMenos;
-                    numeroUsuario = numeroUsuarioMenos;
+                    fatorialResultado = fatorialResultado * indice;
                 }
 
                 indice = indice + 1;
             }
+            Console.WriteLine(fatorialResultado);
+
         }
     }
 }

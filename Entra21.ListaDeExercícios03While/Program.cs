@@ -58,6 +58,6 @@ else if (opcaoDesejada == 8)
 }
 else if (opcaoDesejada == 9)
 {
-    Exercico09 exercicio09 = new.Exercicio09();
+    Exercicio09 exercicio09 = new Exercicio09();
     exercicio09.Executar();
 }

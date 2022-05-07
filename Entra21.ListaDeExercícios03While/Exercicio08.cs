@@ -13,15 +13,14 @@ namespace Entra21.ListaDeExercícios03While
             Console.Write("Digite um número: ");
             double numeroTabuada = Convert.ToDouble(Console.ReadLine());
             int indice = 0;
-            while(indice < 1001)
+            while (indice < 1001)
             {
-                if (indice != 0)
-                {
-                    Console.WriteLine(numeroTabuada + " X " + indice + " = " + (numeroTabuada * indice));
-                }
+
+                Console.WriteLine(numeroTabuada + " X " + indice + " = " + (numeroTabuada * indice));
+
                 indice = indice + 1;
             }
-            
+
         }
     }
 }
