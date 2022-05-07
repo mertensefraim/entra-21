@@ -12,7 +12,7 @@ namespace Entra21.ListaDeExercícios03While
         {
             Console.Write("Digite um número: ");
             int numeroUsuario = Convert.ToInt32(Console.ReadLine());
-            int indice = 0, fatorialResultado = numeroUsuario, numeroFatorial = 0;
+            int indice = 0, fatorialResultado = numeroUsuario;
             while (indice < numeroUsuario)
             {
                 if(indice != 0)
