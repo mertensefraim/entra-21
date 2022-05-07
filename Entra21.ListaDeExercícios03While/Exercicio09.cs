@@ -19,11 +19,9 @@ namespace Entra21.ListaDeExercícios03While
                 {
                     fatorialResultado = fatorialResultado * indice;
                 }
-
                 indice = indice + 1;
             }
             Console.WriteLine(fatorialResultado);
-
         }
     }
 }
