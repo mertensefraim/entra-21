@@ -14,6 +14,7 @@ Console.WriteLine(@"------------MENU------------
 10 - Exercício 10
 11 - Exercício 11
 12 = Exercício 12
+13 = Exercício 13
 14 - Exercício 14
 15 - Exercício 15
 16 - Exercício 16
@@ -82,6 +83,11 @@ else if (opcaoDesejada == 12)
 {
     Exercicio12 exercicio12 = new Exercicio12();
     exercicio12.Executar();
+}
+else if (opcaoDesejada == 13)
+{
+    Exercicio13 exercicio13 = new Exercicio13();
+    exercicio13.Executar();
 }
 else if (opcaoDesejada == 14)
 {
