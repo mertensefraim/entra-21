@@ -64,6 +64,10 @@ namespace Entra21.ListaDeExercícios03While
             int hora = 23;
             while (hora >= 0)
             {
+                //if(hora < 10)
+                //{
+                //    string texto = "0" + hora.ToString();
+                //}
                 int minuto = 59;
                 while (minuto >= 0)
                 {
