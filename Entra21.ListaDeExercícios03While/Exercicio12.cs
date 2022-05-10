@@ -35,34 +35,32 @@ namespace Entra21.ListaDeExercícios03While
             {
                 Console.Write("Digite o valor desejado: ");
                 valorDesejado = Convert.ToInt32(Console.ReadLine());
-                if (valorDesejado == 1)
+                if (valorDesejado >= 1 && valorDesejado <= 5)
                 {
                     quantidadeBolos = quantidadeBolos + 1;
-                    valorProdutos = valorProdutos + 29.50;
-                }
-                else if (valorDesejado == 2)
-                {
-                    quantidadeBolos = quantidadeBolos + 1;
-                    valorProdutos = valorProdutos + 2;
-                }
-                else if (valorDesejado == 3)
-                {
-                    quantidadeBolos = quantidadeBolos + 1;
-                    valorProdutos = valorProdutos + 29.23;
-                }
-                else if (valorDesejado == 4)
-                {
-                    quantidadeBolos = quantidadeBolos + 1;
-                    valorProdutos = valorProdutos + 7.10;
-                }
-                else if (valorDesejado == 5)
-                {
-                    quantidadeBolos = quantidadeBolos + 1;
-                    valorProdutos = valorProdutos + 19.33;
+                    if (valorDesejado == 1)
+                    {
+                        valorProdutos = valorProdutos + 29.50;
+                    }
+                    else if (valorDesejado == 2)
+                    {
+                        valorProdutos = valorProdutos + 2;
+                    }
+                    else if (valorDesejado == 3)
+                    {
+                        valorProdutos = valorProdutos + 29.23;
+                    }
+                    else if (valorDesejado == 4)
+                    {
+                        valorProdutos = valorProdutos + 7.10;
+                    }
+                    else
+                    {
+                        valorProdutos = valorProdutos + 19.33;
+                    }
                 }
                 else if (valorDesejado == 6)
                 {
-                    quantidadeDoces = quantidadeDoces + 1;
                     valorProdutos = valorProdutos + 17.71;
                 }
                 else if (valorDesejado == 7)

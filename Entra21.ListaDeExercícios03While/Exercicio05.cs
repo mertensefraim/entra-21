@@ -11,10 +11,12 @@ namespace Entra21.ListaDeExercicios03___While
         public void Executar()
         {
             Console.Write("Digite a quantidade de carros que deseja cadastrar: ");
-            int quantidadeDesejada = Convert.ToInt32(Console.ReadLine()), indice = 0, quantidadeCarrosG = 0, quantidadeCarrosA = 0;
+            int quantidadeDesejada = Convert.ToInt32(Console.ReadLine());
+
+            int indice = 0, quantidadeCarrosG = 0, quantidadeCarrosA = 0;
             double somaValorCarros = 0, somaAnoCarros = 0;
 
-            while(indice < quantidadeDesejada)
+            while (indice < quantidadeDesejada)
             {
                 Console.Write("Digite o modelo do carro: ");
                 string modeloCarro = Console.ReadLine().ToLower().Trim();
@@ -43,7 +45,7 @@ namespace Entra21.ListaDeExercicios03___While
                 "\nMédia valor dos carros: " + mediaValorCarros +
                 "\nQuantidade de carros que começam com a letra G: " + quantidadeCarrosG +
                 "\nQuantidade de carros que começam com a letra A: " + quantidadeCarrosA);
-         
+
         }
     }
 }

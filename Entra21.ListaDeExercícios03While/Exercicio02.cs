@@ -8,6 +8,8 @@ namespace Entra21.ListaDeExercicios03___While
 {
     internal class Exercicio02
     {
+        // TODO: Francisco, Pedro, João e Lucas.
+        // TODO: Francisco, Pedro e Lucas.
         public void Executar()
         {
             string nomeUsuario = "", texto = "";

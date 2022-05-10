@@ -11,14 +11,15 @@ namespace Entra21.ListaDeExercicios03___While
         public void Executar()
         {
             int indice = 0;
-            double precoPeca = 0;
-            string nomePeca = "", texto = "";
+            string texto = "";
             while (indice < 13)
             {
                 Console.Write("Digite o preço da peça: ");
-                precoPeca = Convert.ToDouble(Console.ReadLine());
+                double precoPeca = Convert.ToDouble(Console.ReadLine());
+
                 Console.Write("Digite o nome da peça: ");
-                nomePeca = Console.ReadLine();
+                string nomePeca = Console.ReadLine();
+
                 texto = texto + "Preço peça: " + precoPeca + "      " + "Nome peça: " + nomePeca + "\n";
                 indice = indice + 1;
             }

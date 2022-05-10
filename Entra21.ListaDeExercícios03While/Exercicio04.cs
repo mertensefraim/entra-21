@@ -12,12 +12,14 @@ namespace Entra21.ListaDeExercicios03___While
         {
             double pesoUsuario = 0;
             int quantidadePessoas = 0;
+
             while (pesoUsuario >= 0 && pesoUsuario <= 300)
             {
                 Console.Write("Digite o seu peso: ");
                 pesoUsuario = Convert.ToDouble(Console.ReadLine());
                 quantidadePessoas = quantidadePessoas + 1;
             }
+
             Console.WriteLine("A quantidade de pessoas que colocaram seu peso foi de " + quantidadePessoas);
 
         }

@@ -8,18 +8,31 @@ namespace Entra21.ListaDeExercícios03While
 {
     internal class Exercicio09
     {
+        //public void Executar()
+        //{
+        //    Console.Write("Digite um número: ");
+        //    int numeroUsuario = Convert.ToInt32(Console.ReadLine());
+        //    int indice = 0, fatorialResultado = numeroUsuario;
+        //    while (indice < numeroUsuario)
+        //    {
+        //        if(indice != 0)
+        //        {
+        //            fatorialResultado = fatorialResultado * indice;
+        //        }
+        //        indice = indice + 1;
+        //    }
+        //    Console.WriteLine(fatorialResultado);
+        //}
         public void Executar()
         {
             Console.Write("Digite um número: ");
             int numeroUsuario = Convert.ToInt32(Console.ReadLine());
-            int indice = 0, fatorialResultado = numeroUsuario;
-            while (indice < numeroUsuario)
+            int indice = numeroUsuario - 1, fatorialResultado = numeroUsuario;
+            while (indice > 1)
             {
-                if(indice != 0)
-                {
-                    fatorialResultado = fatorialResultado * indice;
-                }
-                indice = indice + 1;
+                fatorialResultado = fatorialResultado * indice;
+
+                indice = indice - 1;
             }
             Console.WriteLine(fatorialResultado);
         }

@@ -12,8 +12,10 @@ namespace Entra21.ListaDeExercícios03While
         {
             Console.Write("Digite uma frase: ");
             string fraseUsuario = Console.ReadLine();
-            int quantidadeCaracteres = fraseUsuario.Length, indice = 0;
-            while (indice < quantidadeCaracteres)
+
+            int indice = 0;
+
+            while (indice < fraseUsuario.Length)
             {
                 Console.WriteLine(fraseUsuario.Substring(indice, 1));
                 indice = indice + 1;

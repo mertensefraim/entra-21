@@ -13,7 +13,7 @@ namespace Entra21.ListaDeExercicios03___While
             string nomeProduto = "";
             double valorProduto = 0, valorTotalCompra = 0;
             int quantidadeProduto = 0, quantidadeProdutosTotal = 0;
-            while(quantidadeProdutosTotal < 5)
+            while (quantidadeProdutosTotal < 5)
             {
                 Console.Write("Digite o nome do produto: ");
                 nomeProduto = Console.ReadLine().ToLower().Trim();
@@ -25,12 +25,15 @@ namespace Entra21.ListaDeExercicios03___While
                 quantidadeProdutosTotal = quantidadeProdutosTotal + quantidadeProduto;
                 double valorTotalProdutos = quantidadeProduto * valorProduto;
                 valorTotalCompra = valorTotalCompra + valorTotalProdutos;
-                }
-            double valorTotalDesconto = valorTotalCompra - 150;
-            if(valorTotalDesconto < 0)
-            {
-                valorTotalDesconto = 0;
             }
+
+            double valorTotalDesconto = 0;
+
+            if (valorTotalCompra - 150 >= 0)
+            {
+                valorTotalDesconto = valorTotalCompra - 150;
+            }
+
             Console.WriteLine("O valor total da compra com R$150,00 de desconto foi de R$" + valorTotalDesconto);
         }
     }

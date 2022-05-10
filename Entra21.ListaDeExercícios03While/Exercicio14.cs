@@ -12,12 +12,12 @@ namespace Entra21.ListaDeExercícios03While
         {
             Console.Write("Quantos caracteres serão digitados: ");
             int quantidadeUsuario = Convert.ToInt32(Console.ReadLine()), indice = 0;
-            char caracteresUsuario;
             string fraseUsuario = "";
             while (indice < quantidadeUsuario)
             {
                 Console.Write("Caracter: ");
-                caracteresUsuario = Convert.ToChar(Console.ReadLine());
+                char caracteresUsuario = Console.ReadLine()[0];
+
                 fraseUsuario = fraseUsuario + caracteresUsuario; 
                 indice = indice + 1;
             }
