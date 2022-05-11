@@ -19,9 +19,10 @@ namespace Entra21.ListaDeExercicios03___While
                 nomeUsuario = Console.ReadLine().Trim().ToLower();
                 if (nomeUsuario != "fim")
                 {
-                    texto = texto + nomeUsuario + "\n";
+                    texto = texto + nomeUsuario + ", ";
                 }
             }
+            
             Console.WriteLine(texto);
         }
     }

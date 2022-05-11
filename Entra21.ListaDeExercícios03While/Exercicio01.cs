@@ -15,7 +15,7 @@ namespace Entra21.ListaDeExercicios03___While
             while (indice < 13)
             {
                 Console.Write("Digite o preço da peça: ");
-                double precoPeca = Convert.ToDouble(Console.ReadLine());
+                double precoPeca = Convert.ToDouble(Console.Read());
 
                 Console.Write("Digite o nome da peça: ");
                 string nomePeca = Console.ReadLine();

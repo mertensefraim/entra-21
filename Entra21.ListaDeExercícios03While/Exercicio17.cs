@@ -59,25 +59,111 @@ namespace Entra21.ListaDeExercícios03While
         //}
 
 
+        //public void Executar()
+        //{
+        //    int hora = 23;
+            
+        //    while (hora >= 0)
+        //    {
+        //        string horaFormatada = hora.ToString();
+        //        if (hora < 10)
+        //        {
+        //            horaFormatada = "0" + hora.ToString();
+        //        }
+        //        int minuto = 59;
+        //        while (minuto >= 0)
+        //        {
+        //            string minutoFormatado = minuto.ToString();
+        //            if (minuto < 10)
+        //            {
+        //               minutoFormatado = "0" + minuto.ToString();
+        //            }
+        //            int segundo = 59;
+        //            while (segundo >= 0)
+        //            {
+        //                string segundoFormatado = segundo.ToString();
+        //                if (segundo < 10)
+        //                {
+        //                    segundoFormatado = "0" + segundo.ToString();
+        //                }
+        //                Console.WriteLine(
+        //                    horaFormatada + ":" +
+        //                    minutoFormatado + ":" +
+        //                    segundoFormatado);
+        //                segundo = segundo - 1;
+        //            }
+        //            minuto = minuto - 1;
+        //        }
+        //        hora = hora - 1;
+        //    }
+        //}
+
+        //public void Executar()
+        //{
+        //    int hora = 23;
+        //    while (hora >= 0)
+        //    {
+        //        string horaFormatada = hora.ToString();
+        //        if(hora < 10)
+        //        {
+        //            horaFormatada = "0" + horaFormatada; 
+        //        }
+        //        int minuto = 59;
+        //        while(minuto >= 0)
+        //        {
+        //            string minutoFormatado = minuto.ToString();
+        //            if (minuto < 10)
+        //            {
+        //                minutoFormatado = "0" + minutoFormatado;
+        //            }
+        //            int segundo = 59;
+        //            while(segundo >= 0)
+        //            {
+        //                string segundoFormatado = segundo.ToString();
+        //                if (segundo < 10)
+        //                {
+        //                    segundoFormatado = "0" + segundoFormatado;
+        //                }
+        //                Console.WriteLine(horaFormatada + ":" +
+        //                                  minutoFormatado + ":" +
+        //                                  segundoFormatado);
+        //                segundo = segundo - 1;
+        //            }
+        //            minuto = minuto - 1;
+        //        }
+        //        hora = hora - 1;
+        //    }
+        //}
+
         public void Executar()
         {
             int hora = 23;
             while (hora >= 0)
             {
-                //if(hora < 10)
-                //{
-                //    string texto = "0" + hora.ToString();
-                //}
-                int minuto = 59;
-                while (minuto >= 0)
+                string horaFormatada = hora.ToString();
+                if (hora < 10)
                 {
-                    int segundo = 59;
-                    while (segundo >= 0)
+                    horaFormatada = "0" + horaFormatada;
+                }
+                int minuto = 59;
+                while(minuto >= 0)
+                {
+                    string minutoFormatado = minuto.ToString();
+                    if (minuto < 10)
                     {
-                        Console.WriteLine(
-                            (hora < 10 ? "0" : "") + hora + ":" +
-                            (minuto < 10 ? "0" : "") + minuto + ":" +
-                            (segundo < 10 ? "0" : "") + segundo);
+                        minutoFormatado = "0" + minutoFormatado;
+                    }
+                    int segundo = 59;
+                    while(segundo >= 0)
+                    {
+                        string segundoFormatado = segundo.ToString();
+                        if (segundo < 10)
+                        {
+                            segundoFormatado = "0" + segundoFormatado;
+                        }
+                        Console.WriteLine(horaFormatada + ":" +
+                                          minutoFormatado + ":" +
+                                          segundoFormatado);
                         segundo = segundo - 1;
                     }
                     minuto = minuto - 1;

@@ -12,14 +12,15 @@ namespace Entra21.ListaDeExercicios03___While
         {
             int idadeUsuario = int.MinValue;
             string texto = "";
-            while (idadeUsuario < 128)
+
+            while (idadeUsuario <= 128)
             {
                 Console.Write("Digite sua idade: ");
                 idadeUsuario = Convert.ToInt32(Console.ReadLine());
                 texto = texto + idadeUsuario + "\n";
             }
-            Console.WriteLine(texto);
 
+            Console.WriteLine(texto);
         }
     }
 }
