@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ListaDeExercícios03While", "Entra21.ListaDeExercícios03While\Entra21.ListaDeExercícios03While.csproj", "{9AEE48F3-2FCB-4E66-B882-C49BD8CBE80B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ListaDeExercícios03While", "Entra21.ListaDeExercícios03While\Entra21.ListaDeExercícios03While.csproj", "{9AEE48F3-2FCB-4E66-B882-C49BD8CBE80B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entra21.ListaDeExercícios03TryCatch", "Entra21.ListaDeExercícios03TryCatch", "{49502BCA-22FF-42F1-A2DF-A72414E9FED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ListaDeExercicios03TryCatch", "Entra21.ListaDeExercicios03TryCatch\Entra21.ListaDeExercicios03TryCatch.csproj", "{EDF4B464-8E5D-4AB5-B6DF-ABA834C1B1D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,10 @@ Global
 		{9AEE48F3-2FCB-4E66-B882-C49BD8CBE80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AEE48F3-2FCB-4E66-B882-C49BD8CBE80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AEE48F3-2FCB-4E66-B882-C49BD8CBE80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDF4B464-8E5D-4AB5-B6DF-ABA834C1B1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF4B464-8E5D-4AB5-B6DF-ABA834C1B1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF4B464-8E5D-4AB5-B6DF-ABA834C1B1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF4B464-8E5D-4AB5-B6DF-ABA834C1B1D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
