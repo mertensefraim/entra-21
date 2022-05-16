@@ -114,15 +114,15 @@ namespace Entra21.ListaDeExercicios03TryCatch
 
                 if (modeloCarro.StartsWith("a"))
                 {
-                    quantidadeA = quantidadeA + 1;
+                    quantidadeA++;
                 }
                 else if (modeloCarro.StartsWith("g"))
                 {
-                    quantidadeG = quantidadeG + 1;
+                    quantidadeG++;
                 }
 
-                somaValores = somaValores + valorCarro;
-                somaAnos = somaAnos + anoCarro;
+                somaValores += valorCarro;
+                somaAnos += anoCarro;
             }
             mediaAnos = somaAnos / quantidadeVezes;
             mediaValores = somaValores / quantidadeVezes;
