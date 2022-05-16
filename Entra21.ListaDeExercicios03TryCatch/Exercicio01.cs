@@ -59,5 +59,8 @@ namespace Entra21.ListaDeExercicios03TryCatch
             }
             Console.WriteLine(texto);
         }
-    
+    }
+}
+
+
 

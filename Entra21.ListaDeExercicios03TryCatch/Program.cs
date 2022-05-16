@@ -18,3 +18,8 @@ if (opcaoDesejada == 1)
     var exercicio01 = new Exercicio01();
     exercicio01.Executar();
 }
+else if(opcaoDesejada == 5)
+{
+    var exercicio05 = new Exercicio08();
+    exercicio05.Executar();
+}
