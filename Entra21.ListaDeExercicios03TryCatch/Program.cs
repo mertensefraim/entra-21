@@ -23,3 +23,8 @@ else if(opcaoDesejada == 5)
     var exercicio05 = new Exercicio05();
     exercicio05.Executar();
 }
+else if(opcaoDesejada == 8)
+{
+    var exercicio08 = new Exercicio08();
+    exercicio08.Executar();
+}
