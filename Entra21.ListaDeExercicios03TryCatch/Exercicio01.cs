@@ -22,7 +22,7 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     {
                         Console.Write("Digite preço da peça: ");
                         precoPeca = Convert.ToDouble(Console.ReadLine());
-                        if (precoPeca < 0)
+                        if (precoPeca <= 0)
                         {
                             Console.WriteLine("Um valor negativo não é permitido");
                         }

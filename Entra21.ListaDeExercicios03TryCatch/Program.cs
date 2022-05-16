@@ -20,6 +20,6 @@ if (opcaoDesejada == 1)
 }
 else if(opcaoDesejada == 5)
 {
-    var exercicio05 = new Exercicio08();
+    var exercicio05 = new Exercicio05();
     exercicio05.Executar();
 }
