@@ -10,18 +10,33 @@ namespace Entra21.ListaDeExercicios03TryCatch
     {
         public void Executar()
         {
+            var nomeMenorPeso = "";
+            var nomeMaiorPeso = "";
+            var nomeMaiorAltura = "";
+;           var maiorNome = "";
+            var menorNome = "";
+            var nomeMenosAmarelo = "";
+            var nomeMaisAmarelo = "";
+            var nomeMenosVermelho = "";
+            var nomeMaisVermelho = "";
+            var quantidadeM = 0;
+            var quantidadeF = 0;
+
             for (var i = 0; i < 3; i++)
             {
                 var idade = 0;
                 var quantidadeGols = 0;
                 var cartoesAmarelos = 0;
+                var menosAmarelos = int.MaxValue;
+                var maisAmarelos = int.MinValue;
                 var cartoesVermelhos = 0;
+                var menosVermelhos = int.MaxValue;
+                var maisVermelhos = int.MinValue;
                 var peso = 0.0;
-                var menorPeso = 0.0;
-                var maiorPeso = 0.0;
+                var menorPeso = double.MaxValue;
+                var maiorPeso = double.MinValue;
                 var altura = 0.0;
-                var menorAltura = 0.0;
-                var maiorAltura = 0.0;
+                var maiorAltura = double.MinValue;
                 var sexo = "";
                 var nome = "";
                 var verificador = false;
@@ -195,7 +210,68 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                 }
 
+                if (peso < menorPeso)
+                {
+                    menorPeso = peso;
+                    nomeMenorPeso = nome;
+                }
+                if (peso > maiorPeso)
+                {
+                    maiorPeso = peso;
+                    nomeMaiorPeso = nome;
+                }
+                if (altura > maiorAltura)
+                {
+                    nomeMaiorAltura = nome;
+                }
+                if (sexo == "m")
+                {
+                    quantidadeM++;
+                }
+                else if (sexo == "f")
+                {
+                    quantidadeF++;
+                }
+                if (nome.Length > maiorNome.Length)
+                {
+                    maiorNome = nome;
+                }
+                if (nome.Length < menorNome.Length)
+                {
+                    menorNome = nome;
+                }
+                if (cartoesAmarelos < menosAmarelos)
+                {
+                    menosAmarelos = cartoesAmarelos;
+                    nomeMenosAmarelo = nome;
+                }
+                if (cartoesAmarelos > maisAmarelos)
+                {
+                    maisAmarelos = cartoesAmarelos;
+                    nomeMaisAmarelo = nome;
+                }
+                if (cartoesVermelhos < menosVermelhos)
+                {
+                    menosVermelhos = cartoesVermelhos;
+                    nomeMenosVermelho = nome;
+                }
+                if (cartoesVermelhos > maisVermelhos)
+                {
+                    maisVermelhos = cartoesVermelhos;
+                    nomeMaisVermelho = nome;
+                }
             }
+            Console.WriteLine("Jogador com o menor peso: " + nomeMenorPeso +
+                                          "\nJogador com a maior altura: " + nomeMaiorAltura +
+                                          "\nJogador com o maior nome: " + maiorNome +
+                                          "\nQuantidade de jogadores do sexo F: " + quantidadeF +
+                                          "\nQuantidade de jogadores do sexo M: " + quantidadeM +
+                                          "\nJogador com a menor quantidade de cartões amarelos recebidos: " + menorQuantidadeCartoesAmarelosJogador +
+                                          "\nJogador com o menor nome: " + menorNomeJogador +
+                                          "\nJogador com o maior peso: " + maiorPesoJogador +
+                                          "\nJogador com a maior quantidade de cartões vermelhos recebidos: " + maiorQuantidadeCartoesVermelhosJogador +
+                                          "\nJogador com a maior quantidade de cartões amarelos recebidos: " + maiorQuantidadeCartoesAmarelosJogador +
+                                          "\nJogador com a menor quantidade de cartões vermelhos recebidos: " + menorQuantidadeCartoesVermelhosJogador);
         }
     }
 }
