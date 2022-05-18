@@ -266,12 +266,12 @@ namespace Entra21.ListaDeExercicios03TryCatch
                                           "\nJogador com o maior nome: " + maiorNome +
                                           "\nQuantidade de jogadores do sexo F: " + quantidadeF +
                                           "\nQuantidade de jogadores do sexo M: " + quantidadeM +
-                                          "\nJogador com a menor quantidade de cartões amarelos recebidos: " + menorQuantidadeCartoesAmarelosJogador +
-                                          "\nJogador com o menor nome: " + menorNomeJogador +
-                                          "\nJogador com o maior peso: " + maiorPesoJogador +
-                                          "\nJogador com a maior quantidade de cartões vermelhos recebidos: " + maiorQuantidadeCartoesVermelhosJogador +
-                                          "\nJogador com a maior quantidade de cartões amarelos recebidos: " + maiorQuantidadeCartoesAmarelosJogador +
-                                          "\nJogador com a menor quantidade de cartões vermelhos recebidos: " + menorQuantidadeCartoesVermelhosJogador);
+                                          "\nJogador com a menor quantidade de cartões amarelos recebidos: " + nomeMenosAmarelo +
+                                          "\nJogador com o menor nome: " + nomeMenorPeso +
+                                          "\nJogador com o maior peso: " + nomeMaiorPeso +
+                                          "\nJogador com a maior quantidade de cartões vermelhos recebidos: " + nomeMaisVermelho +
+                                          "\nJogador com a maior quantidade de cartões amarelos recebidos: " + nomeMaisAmarelo +
+                                          "\nJogador com a menor quantidade de cartões vermelhos recebidos: " + nomeMenosVermelho);
         }
     }
 }
