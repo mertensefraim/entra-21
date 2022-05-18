@@ -13,32 +13,40 @@ namespace Entra21.ListaDeExercicios03TryCatch
             var nomeMenorPeso = "";
             var nomeMaiorPeso = "";
             var nomeMaiorAltura = "";
-;           var maiorNome = "";
-            var menorNome = "";
             var nomeMenosAmarelo = "";
             var nomeMaisAmarelo = "";
             var nomeMenosVermelho = "";
             var nomeMaisVermelho = "";
+            var nomeMaisGols = "";
+            var nomeMenosGols = "";
+            var maiorNome = "";
+            var menorNome = "";
             var quantidadeM = 0;
             var quantidadeF = 0;
+            var maiorNomeCaracteres = int.MinValue;
+            var menorNomeCaracteres = int.MaxValue;
+            var menosAmarelos = int.MaxValue;
+            var maisAmarelos = int.MinValue;
+            var menosVermelhos = int.MaxValue;
+            var maisVermelhos = int.MinValue;
+            var menorPeso = double.MaxValue;
+            var maiorAltura = double.MinValue;
+            var maiorPeso = double.MinValue;
+            var menorGols = int.MaxValue;
+            var maiorGols = int.MinValue;
 
             for (var i = 0; i < 3; i++)
             {
+             
                 var idade = 0;
-                var quantidadeGols = 0;
-                var cartoesAmarelos = 0;
-                var menosAmarelos = int.MaxValue;
-                var maisAmarelos = int.MinValue;
                 var cartoesVermelhos = 0;
-                var menosVermelhos = int.MaxValue;
-                var maisVermelhos = int.MinValue;
+                var golsMarcados = 0;
+                var cartoesAmarelos = 0;
                 var peso = 0.0;
-                var menorPeso = double.MaxValue;
-                var maiorPeso = double.MinValue;
                 var altura = 0.0;
-                var maiorAltura = double.MinValue;
                 var sexo = "";
                 var nome = "";
+               
                 var verificador = false;
                 while (verificador == false)
                 {
@@ -46,11 +54,15 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     nome = Console.ReadLine();
                     if (nome.Length < 3)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O nome não pode ser menor que 3 letras");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (nome.Length > 15)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O nome não pode ser maior que 15 letras");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
@@ -68,7 +80,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         idade = Convert.ToInt32(Console.ReadLine());
                         if (idade < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("A idade não pode ser negativa!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -77,7 +91,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("A idade deve ser um número inteiro!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -91,7 +107,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         peso = Convert.ToDouble(Console.ReadLine());
                         if (peso < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("O peso não pode ser negativo!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -100,7 +118,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O peso deve ser um número!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -114,7 +134,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         altura = Convert.ToDouble(Console.ReadLine());
                         if (altura < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("A altura não pode ser negativa!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -123,17 +145,23 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("A altura deve ser um número!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
+                verificador = false;
+
                 while (verificador == false)
                 {
-                    Console.Write("Sexo: ");
+                    Console.Write("Sexo: M/F ");
                     sexo = Console.ReadLine().Trim().ToLower();
-                    if (sexo != "m" || sexo != "f")
+                    if (sexo != "m" && sexo != "f")
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O sexo deve ser 'm' para masculino e 'f' para feminino");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
@@ -151,7 +179,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         golsMarcados = Convert.ToInt32(Console.ReadLine());
                         if (golsMarcados < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("A quantidade de gols marcados não pode ser negativa!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -160,7 +190,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("A quantidade de gols marcados deve ser um número inteiro!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -174,7 +206,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         cartoesAmarelos = Convert.ToInt32(Console.ReadLine());
                         if (cartoesAmarelos < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("A quantidade de cartões amarelos não pode ser negativa!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -183,7 +217,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("A quantidade de cartões amarelos deve ser um número inteiro!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -197,7 +233,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         cartoesVermelhos = Convert.ToInt32(Console.ReadLine());
                         if (cartoesVermelhos < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("A quantidade de cartões vermelhos não pode ser negativa!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -206,24 +244,53 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("A quantidade de cartões vermelhos deve ser um número inteiro!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
-                if (peso < menorPeso)
+                Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+                if (peso <= menorPeso)
                 {
+                    if (peso == menorPeso)
+                    {
+                        nomeMenorPeso += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMenorPeso = nome;
+                    }
                     menorPeso = peso;
-                    nomeMenorPeso = nome;
                 }
-                if (peso > maiorPeso)
+
+                if (peso >= maiorPeso)
                 {
+                    if (peso == maiorPeso)
+                    {
+                        nomeMaiorPeso += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMaiorPeso = nome;
+                    }
                     maiorPeso = peso;
-                    nomeMaiorPeso = nome;
                 }
-                if (altura > maiorAltura)
+
+                if (altura >= maiorAltura)
                 {
-                    nomeMaiorAltura = nome;
+                    if (altura == maiorAltura)
+                    {
+                        nomeMaiorAltura += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMaiorAltura = nome;
+                    }
+                    maiorAltura = altura;
                 }
+
                 if (sexo == "m")
                 {
                     quantidadeM++;
@@ -232,35 +299,112 @@ namespace Entra21.ListaDeExercicios03TryCatch
                 {
                     quantidadeF++;
                 }
-                if (nome.Length > maiorNome.Length)
+
+                if (nome.Length >= maiorNomeCaracteres)
                 {
-                    maiorNome = nome;
+                    if (nome.Length == maiorNomeCaracteres)
+                    {
+                        maiorNome += "|" + nome;
+                    }
+                    else
+                    {
+                        maiorNome = nome;
+                    }
+                    maiorNomeCaracteres = nome.Length;
                 }
-                if (nome.Length < menorNome.Length)
+
+                if (nome.Length <= menorNomeCaracteres)
                 {
-                    menorNome = nome;
+                    if (nome.Length == menorNomeCaracteres)
+                    {
+                        menorNome += "|" + nome ;
+                    }
+                    else
+                    {
+                        menorNome = nome;
+                    }
+                    menorNomeCaracteres = nome.Length;
                 }
-                if (cartoesAmarelos < menosAmarelos)
+
+                if (cartoesAmarelos <= menosAmarelos)
                 {
+                    if (cartoesAmarelos == menosAmarelos)
+                    {
+                        nomeMenosAmarelo += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMenosAmarelo = nome;
+                    }
                     menosAmarelos = cartoesAmarelos;
-                    nomeMenosAmarelo = nome;
                 }
-                if (cartoesAmarelos > maisAmarelos)
+
+                if (cartoesAmarelos >= maisAmarelos)
                 {
+                    if (cartoesAmarelos == menosAmarelos)
+                    {
+                        nomeMaisAmarelo += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMaisAmarelo = nome;
+                    }
                     maisAmarelos = cartoesAmarelos;
-                    nomeMaisAmarelo = nome;
                 }
-                if (cartoesVermelhos < menosVermelhos)
+
+                if (cartoesVermelhos <= menosVermelhos)
                 {
+                    if (cartoesVermelhos == menosVermelhos)
+                    {
+                        nomeMenosVermelho += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMenosVermelho = nome;
+                    }
                     menosVermelhos = cartoesVermelhos;
-                    nomeMenosVermelho = nome;
                 }
-                if (cartoesVermelhos > maisVermelhos)
+
+                if (cartoesVermelhos >= maisVermelhos)
                 {
+                    if (cartoesVermelhos == maisVermelhos)
+                    {
+                        nomeMaisVermelho += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMaisVermelho = nome;
+                    }
                     maisVermelhos = cartoesVermelhos;
-                    nomeMaisVermelho = nome;
+                }
+
+                if (golsMarcados <= menorGols)
+                {
+                    if (golsMarcados == menorGols)
+                    {
+                        nomeMenosGols += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMenosGols = nome;
+                    }
+                    menorGols = golsMarcados;
+                }
+
+                if (golsMarcados >= maiorGols)
+                {
+                    if (golsMarcados == maiorGols)
+                    {
+                        nomeMaisGols += "|" + nome;
+                    }
+                    else
+                    {
+                        nomeMaisGols = nome;
+                    }
+                    maiorGols = golsMarcados;
                 }
             }
+
             Console.WriteLine("Jogador com o menor peso: " + nomeMenorPeso +
                                           "\nJogador com a maior altura: " + nomeMaiorAltura +
                                           "\nJogador com o maior nome: " + maiorNome +
@@ -271,7 +415,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                                           "\nJogador com o maior peso: " + nomeMaiorPeso +
                                           "\nJogador com a maior quantidade de cartões vermelhos recebidos: " + nomeMaisVermelho +
                                           "\nJogador com a maior quantidade de cartões amarelos recebidos: " + nomeMaisAmarelo +
-                                          "\nJogador com a menor quantidade de cartões vermelhos recebidos: " + nomeMenosVermelho);
+                                          "\nJogador com a menor quantidade de cartões vermelhos recebidos: " + nomeMenosVermelho +
+                                          "\nJogador com a menor quantidade de gols: " + nomeMenosGols + 
+                                          "\nJogador com a maior quantidade de gols: " + nomeMaisGols);
         }
     }
 }

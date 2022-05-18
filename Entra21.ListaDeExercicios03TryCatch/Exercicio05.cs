@@ -30,7 +30,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     quantidadeVezes = Convert.ToInt32(Console.ReadLine());
                     if (quantidadeVezes <= 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor deve ser maior que 0");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
@@ -39,7 +41,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                 }
                 catch (Exception ex)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("O valor deve ser número inteiro");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
 
@@ -54,11 +58,15 @@ namespace Entra21.ListaDeExercicios03TryCatch
 
                     if (modeloCarro.Length <= 3)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O nome do carro não ser menor que três caracteres");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (modeloCarro.Length >= 15)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O nome do carro não ser maior que quinze caracteres");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
@@ -76,7 +84,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         valorCarro = Convert.ToDouble(Console.ReadLine());
                         if (valorCarro <= 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("O valor não pode ser negativo");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -85,7 +95,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor digitado não é um número");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -99,7 +111,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         anoCarro = Convert.ToInt32(Console.ReadLine());
                         if (anoCarro < 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("O valor não pode ser negativo");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -108,7 +122,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor digitado não é um número inteiro");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 

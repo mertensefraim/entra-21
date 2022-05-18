@@ -49,7 +49,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         numeroUsuario = Convert.ToInt32(Console.ReadLine());
                         if (numeroUsuario <= 0 || numeroUsuario > 16)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Essa opção não existe!");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -58,7 +60,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor não é um número inteiro!!!");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 

@@ -22,7 +22,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                 }
                 catch (Exception ex)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("O valor deve ser um número");
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
             }
 

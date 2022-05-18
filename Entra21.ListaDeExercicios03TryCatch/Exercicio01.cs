@@ -24,7 +24,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                         precoPeca = Convert.ToDouble(Console.ReadLine());
                         if (precoPeca <= 0)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Um valor negativo não é permitido");
+                            Console.ForegroundColor = ConsoleColor.White;
                         }
                         else
                         {
@@ -33,7 +35,9 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     }
                     catch (Exception ex)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O valor digitado não é permitido");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
 
@@ -44,11 +48,15 @@ namespace Entra21.ListaDeExercicios03TryCatch
                     nomePeca = Console.ReadLine();
                     if (nomePeca.Length > 15)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O nome da peça não ser maior que quinze caracteres");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (nomePeca.Length < 2)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("O nome da peça não ser menor que dois caracteres");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
