@@ -8,14 +8,12 @@
 
             var valor1 = 1;
             var valor2 = 1;
-            var valor3 = 0;
 
             Console.Write(valor1 + "|");
             for (var i = 1; i < 20; i++)
             {
-                valor3 = valor1;
                 valor1 = +valor2;
-                valor2 = valor3;
+                valor2 = valor1 - valor2;
 
                 Console.Write(valor2 + "|");
             }
