@@ -13,6 +13,7 @@ namespace Entra21.ListaDeExercicios03___While
         public void Executar()
         {
             string nomeUsuario = "", texto = "";
+
             while (nomeUsuario != "fim")
             {
                 Console.Write("Digite seu nome: ");

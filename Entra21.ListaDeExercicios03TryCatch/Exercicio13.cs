@@ -21,10 +21,13 @@ namespace Entra21.ListaDeExercicios03TryCatch
             var nomeMenosGols = "";
             var maiorNome = "";
             var menorNome = "";
+
             var quantidadeM = 0;
             var quantidadeF = 0;
+
             var maiorNomeCaracteres = int.MinValue;
             var menorNomeCaracteres = int.MaxValue;
+
             var menosAmarelos = int.MaxValue;
             var maisAmarelos = int.MinValue;
             var menosVermelhos = int.MaxValue;
