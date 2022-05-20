@@ -10,7 +10,7 @@ namespace Entra21.ListaDeExercicios04Vetores
     {
         public void Executar()
         {
-            string[] nomes = new string[3];
+            string[] nomes = new string[10];
 
             for (var i = 0; i < nomes.Length; i++)
             {
