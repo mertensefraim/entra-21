@@ -45,31 +45,30 @@ namespace Entra21.ListaDeExercicios04Vetores
                 }
                 textoNumeros = textoNumeros + numeros[i] + "|";
             }
-            
+
+            var contador = 0;
+
             for (var i = 0; i < numeros.Length; i++)
             {
                 int[] numerosPares = new int[quantidadePares];
                 if (numeros[i] % 2 == 0 )
                 {
-                    numerosPares[i] = numeros[i];
-                    if (i <= quantidadePares)
-                    {
-                        textoNumerosPares = textoNumerosPares + numerosPares[i] + "|";
-                    }
-                    else
-                    {
-                        textoNumerosPares = textoNumerosPares + numerosPares[i ] + "|";
-                    }
+                    numerosPares[contador] = numeros[i];
+                    textoNumerosPares = textoNumerosPares + numerosPares[contador] + "|";
+                    contador++;
                 }
             }
+
+            contador = 0;
 
             for (var i = 0; i < numeros.Length; i++)
             {
                 int[] numerosImpares = new int[quantidadeImpares];
-                if (numeros[i] % 2 != 0 && i <= quantidadeImpares)
+                if (numeros[i] % 2 != 0)
                 {
-                    numerosImpares[i] = numeros[i];
-                    textoNumerosImpares = textoNumerosImpares + numerosImpares[i] + "|";
+                    numerosImpares[contador] = numeros[i];
+                    textoNumerosImpares = textoNumerosImpares + numerosImpares[contador] + "|";
+                    contador++;
                 }
             }
 
