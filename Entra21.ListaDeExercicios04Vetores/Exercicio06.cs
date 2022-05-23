@@ -41,6 +41,7 @@ namespace Entra21.ListaDeExercicios04Vetores
                     }
                 }
             }
+
             for (var i = 0; i < idades.Length; i++)
             {
                 if (idades[i] < menorIdade)
@@ -48,6 +49,7 @@ namespace Entra21.ListaDeExercicios04Vetores
                     menorIdade = idades[i];
                 }
             }
+
             Console.WriteLine($"A menor idade é {menorIdade}");
         }
     }

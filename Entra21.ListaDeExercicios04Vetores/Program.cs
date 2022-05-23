@@ -8,6 +8,9 @@ Console.WriteLine(@"------------MENU------------
 04 - Exercício 04
 05 - Exercício 05
 06 - Exercício 06
+07 - Exercício 07
+09 - Exercício 09
+11 - Exercício 11
 ");
 
 Console.Write("Digite a opção desejada: ");
@@ -43,4 +46,19 @@ else if (opcaoDesejada == 6)
 {
     var exercicio06 = new Exercicio06();
     exercicio06.Executar();
+}
+else if (opcaoDesejada == 7)
+{
+    var exercicio07 = new Exercicio07();
+    exercicio07.Executar();
+}
+else if (opcaoDesejada == 9)
+{
+    var exercicio09 = new Exercicio09();
+    exercicio09.Executar();
+}
+else if (opcaoDesejada == 11)
+{
+    var exercicio11 = new Exercicio11();
+    exercicio11.Executar();
 }
