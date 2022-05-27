@@ -10,42 +10,42 @@ namespace Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio02
     {
         public string EscalaOrigem;
         public string EscalaDestino;
-        public int TemperaturaOrigem;
+        public double TemperaturaOrigem;
 
         public double CalcularCelsius()
         {
-            if (EscalaOrigem == "kelvin")
-                return TemperaturaOrigem + 273;
+            if (EscalaDestino == "kelvin")
+                return TemperaturaOrigem + 273.15;
 
             return TemperaturaOrigem * 1.8 + 32;
         }
 
         public double CalcularKelvin()
         {
-            if (EscalaOrigem == "celsius")
-                return TemperaturaOrigem - 273;
+            if (EscalaDestino == "celsius")
+                return TemperaturaOrigem - 273.15;
 
             return (TemperaturaOrigem - 273.15) * 1.8 + 32; 
         }
 
         public double CalcularFarenheit()
         {
-            if (EscalaOrigem == "celsius")
-                return (TemperaturaOrigem - 32) * 1.8;
+            if (EscalaDestino == "celsius")
+                return (TemperaturaOrigem - 32) * 5 / 9;
 
-            return (TemperaturaOrigem - 32) * 1.8 + 273.15;
+            return (TemperaturaOrigem - 32) * 5 / 9 + 273.15;
         }
 
-        public void VerificarEscalaOrigem()
+        public double VerificarEscalaOrigem()
         {
             if (EscalaOrigem == "celsius")
-                CalcularCelsius();
+                return CalcularCelsius();
 
             else if (EscalaOrigem == "kelvin")
-                CalcularKelvin();
+                return CalcularKelvin();
 
             else
-                CalcularFarenheit();
+                return CalcularFarenheit();
         }
     }
 }
