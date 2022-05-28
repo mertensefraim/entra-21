@@ -12,133 +12,186 @@ namespace Entra21.ListaDeExercicios05OrientacaoObjetos.Tests.Exercicio02
     public class TemperaturaTests
     {
         [Fact]
-        public void Validar_CalcularCelsius_Kelvin01()
+        public void Validar_CalcularCelsiusParaKelvin01()
         {
             // Arrange
             var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "kelvin";
-            temperatura.TemperaturaOrigem = 30;
+            temperatura.TemperaturaOrigem = 20;
 
-            // Act 
-            var calcularCelsiusKelvin = temperatura.CalcularCelsius();
+            // Act
+            var temperaturaConvertida = temperatura.CalcularCelsiusParaKelvin();
 
             // Assert
-            calcularCelsiusKelvin.Should().Be(303.15);
+            temperaturaConvertida.Should().Be(293.15);
         }
 
         [Fact]
-        public void Validar_CalcularCelsius_Kelvin02()
+        public void Validar_CalcularCelsiusParaKelvin02()
         {
             // Arrange
             var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "kelvin";
-            temperatura.TemperaturaOrigem = 50;
+            temperatura.TemperaturaOrigem = -20;
 
-            // Act 
-            var calcularCelsiusKelvin = temperatura.CalcularCelsius();
+            // Act
+            var temperaturaConvertida = temperatura.CalcularCelsiusParaKelvin();
 
             // Assert
-            calcularCelsiusKelvin.Should().Be(323.15);
+            temperaturaConvertida.Should().Be(253.14999999999998);
         }
 
         [Fact]
-        public void Validar_CalcularCelsius_Farenheit01()
+        public void Validar_CalcularCelsiusParaFahrenhait01()
         {
             // Arrange
             var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "farenheit";
             temperatura.TemperaturaOrigem = 30;
 
             // Act
-            var calcularCelsiusFarenheit = temperatura.CalcularCelsius();
+            var temperaturaConvertida = temperatura.CalcularCelsiusParaFahrenheit();
 
             // Assert
-            calcularCelsiusFarenheit.Should().Be(86);
-        }     
+            temperaturaConvertida.Should().Be(86);
+        }    
+        [Fact]
+        public void Validar_CalcularCelsiusParaFahrenhait02()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = -20;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularCelsiusParaFahrenheit();
+
+            // Assert
+            temperaturaConvertida.Should().Be(-4);
+        }
+
+        [Fact]
+        public void Validar_CalcularKelvinParaCelsius01()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = 30;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularKelvinParaCelsius();
+
+            // Assert
+            temperaturaConvertida.Should().Be(-243.14999999999998);
+        }
+
+        [Fact]
+        public void Validar_CalcularKelvinParaCelsius02()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = -20;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularKelvinParaCelsius();
+
+            // Assert
+            temperaturaConvertida.Should().Be(-293.14999999999998);
+        }
+
+        [Fact]
+        public void Validar_CalcularKelvinParaFahrenheit01()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = 30;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularKelvinParaFahrenheit();
+
+            // Assert
+            temperaturaConvertida.Should().Be(-405.66999999999996);
+        }
+
+        [Fact]
+        public void Validar_CalcularKelvinFahrenheit02()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = -20;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularKelvinParaFahrenheit();
+
+            // Assert
+            temperaturaConvertida.Should().Be(-495.66999999999996);
+        }
+
+        [Fact]
+        public void Validar_CalcularFahrenheitParaCelsius01()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = 30;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaCelsius();
+
+            // Assert
+            temperaturaConvertida.Should().Be(-1.1111111111111112);
+        }
         
         [Fact]
-        public void Validar_CalcularCelsius_Farenheit02()
+        public void Validar_CalcularFahrenheitParaCelsius02()
         {
             // Arrange
             var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "farenheit";
-            temperatura.TemperaturaOrigem = 50;
+            temperatura.TemperaturaOrigem = -20;
 
             // Act
-            var calcularCelsiusFarenheit = temperatura.CalcularCelsius();
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaCelsius();
 
             // Assert
-            calcularCelsiusFarenheit.Should().Be(122);
+            temperaturaConvertida.Should().Be(-28.88888888888889);
         }
 
         [Fact]
-        public void Validar_CalcularFarenheit_Celsius01()
+        public void Validar_CalcularFahrenheitParaKelvin01()
         {
             // Arrange
             var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "celsius";
-            temperatura.TemperaturaOrigem = 0;
+            temperatura.TemperaturaOrigem = 30;
 
             // Act
-            var calcularFarenheitCelsius = temperatura.CalcularFarenheit();
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaKelvin();
 
             // Assert
-            calcularFarenheitCelsius.Should().Be(-17.777777);
-        }
-
-
-        [Fact]
-        public void Validar_CalcularFarenheit_Celsius02()
-        {
-            // Arrange
-            var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "celsius";
-            temperatura.TemperaturaOrigem = 50;
-
-            // Act
-            var calcularFarenheitCelsius = temperatura.CalcularFarenheit();
-
-            // Assert
-            calcularFarenheitCelsius.Should().Be(10);
+            temperaturaConvertida.Should().Be(272.0388888888889);
         }
 
         [Fact]
-        public void Validar_CalcularFarenheit_Kelvin01()
+        public void Validar_CalcularFahrenheitParaKelvin02()
         {
             // Arrange
             var temperatura = new Temperatura();
+            temperatura.TemperaturaOrigem = -30;
+
+            // Act
+            var temperaturaConvertida = temperatura.CalcularFahrenheitParaKelvin();
+
+            // Assert
+            temperaturaConvertida.Should().Be(238.70555555555552);
+        }
+
+        [Fact]
+        public void Validar_ApresentarTemperaturaConvertida()
+        {
+            // Arrange
+            var temperatura = new Temperatura();
+            temperatura.EscalaOrigem = "celsius";
             temperatura.EscalaDestino = "kelvin";
-            temperatura.TemperaturaOrigem = 50;
+            temperatura.TemperaturaOrigem = 30;
 
             // Act
-            var calcularFarenheitKelvin = temperatura.CalcularFarenheit();
+            var apresentarTemperatura = temperatura.ApresentarTemperaturaConvertida();
 
             // Assert
-            calcularFarenheitKelvin.Should().Be(283.15);
-        } 
-        
-        [Fact]
-        public void Validar_CalcularFarenheit_Kelvin02()
-        {
-            // Arrange
-            var temperatura = new Temperatura();
-            temperatura.EscalaDestino = "kelvin";
-            temperatura.TemperaturaOrigem = 00;
-
-            // Act
-            var calcularFarenheitKelvin = temperatura.CalcularFarenheit();
-
-            // Assert
-            calcularFarenheitKelvin.Should().Be(255.372);
-        }
-
-        [Fact]
-
-        public void Validar_CalcularKelvin_Celsius()
-        {
-            // Arrange
-            var temperatura = new Temperatura();
-            temperatura
+            apresentarTemperatura.Should().Be(303.15);
         }
     }
 }

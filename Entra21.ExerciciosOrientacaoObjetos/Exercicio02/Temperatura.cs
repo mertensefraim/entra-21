@@ -12,40 +12,56 @@ namespace Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio02
         public string EscalaDestino;
         public double TemperaturaOrigem;
 
-        public double CalcularCelsius()
+        public double CalcularCelsiusParaKelvin()
         {
-            if (EscalaDestino == "kelvin")
-                return TemperaturaOrigem + 273.15;
-
-            return TemperaturaOrigem * 1.8 + 32;
+            return TemperaturaOrigem + 273.15;
         }
 
-        public double CalcularKelvin()
+        public double CalcularCelsiusParaFahrenheit()
         {
-            if (EscalaDestino == "celsius")
-                return TemperaturaOrigem - 273.15;
-
-            return (TemperaturaOrigem - 273.15) * 1.8 + 32; 
+            return TemperaturaOrigem * 9 / 5 + 32;
         }
 
-        public double CalcularFarenheit()
+        public double CalcularKelvinParaCelsius()
         {
-            if (EscalaDestino == "celsius")
-                return (TemperaturaOrigem - 32) * 5 / 9;
+            return TemperaturaOrigem - 273.15;
+        }
 
+        public double CalcularKelvinParaFahrenheit()
+        {
+            return (TemperaturaOrigem - 273.15) * 9 / 5 + 32;
+        }
+
+        public double CalcularFahrenheitParaCelsius()
+        {
+            return (TemperaturaOrigem - 32) * 5 / 9;
+        }
+
+        public double CalcularFahrenheitParaKelvin()
+        {
             return (TemperaturaOrigem - 32) * 5 / 9 + 273.15;
         }
-
-        public double VerificarEscalaOrigem()
+        public double ApresentarTemperaturaConvertida()
         {
-            if (EscalaOrigem == "celsius")
-                return CalcularCelsius();
+            if (EscalaOrigem == "celsius" && EscalaDestino == "kelvin")
+                return CalcularCelsiusParaKelvin();
 
-            else if (EscalaOrigem == "kelvin")
-                return CalcularKelvin();
+            else if (EscalaOrigem == "celsius" && EscalaDestino == "fahrenheit")
+                return CalcularCelsiusParaFahrenheit();
 
-            else
-                return CalcularFarenheit();
+            else if (EscalaOrigem == "kelvin" && EscalaDestino == "celsius")
+                return CalcularKelvinParaCelsius();
+
+            else if (EscalaOrigem == "kelvin" && EscalaDestino == "fahrenheit")
+                return CalcularKelvinParaFahrenheit();
+
+            else if (EscalaOrigem == "fahrenheit" && EscalaDestino == "celsius")
+                return CalcularFahrenheitParaCelsius();
+
+            else if (EscalaOrigem == "fahrenheit" && EscalaDestino == "kelvin")
+                return CalcularFahrenheitParaKelvin();
+
+            return TemperaturaOrigem;
         }
     }
 }
