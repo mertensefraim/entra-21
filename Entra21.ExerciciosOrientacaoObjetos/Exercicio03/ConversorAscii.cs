@@ -32,6 +32,8 @@ namespace Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio03
 
             else if (Caracter.ToString() == "g")
                 return 71;
+
+            return 0;
         }
     }
 }
