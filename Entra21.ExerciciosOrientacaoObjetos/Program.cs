@@ -1,6 +1,6 @@
 ﻿using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio01;
 using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio02;
-
+using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio03;
 
 Console.WriteLine(@"Tabela
 Exercício 01 - 01
@@ -18,5 +18,10 @@ if (valorUsuario == 1)
 else if (valorUsuario == 2)
 {
     var exercicio = new ExemploTemperatura();
+    exercicio.Executar();
+}
+else if (valorUsuario == 3)
+{
+    var exercicio = new ExemploConversorAscii();
     exercicio.Executar();
 }
