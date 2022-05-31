@@ -1,6 +1,7 @@
 ﻿using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio01;
 using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio02;
 using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio03;
+using Entra21.ListaDeExercicios05OrientacaoObjetos.Exercicio04;
 
 Console.WriteLine(@"Tabela
 Exercício 01 - 01
@@ -23,5 +24,10 @@ else if (valorUsuario == 2)
 else if (valorUsuario == 3)
 {
     var exercicio = new ExemploConversorAscii();
+    exercicio.Executar();
+}
+else if (valorUsuario == 4)
+{
+    var exercicio = new ExemploFarmacia();
     exercicio.Executar();
 }
