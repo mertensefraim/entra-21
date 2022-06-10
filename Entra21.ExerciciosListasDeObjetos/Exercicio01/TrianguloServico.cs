@@ -22,6 +22,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 
             return null;
         }
+
         public bool Adicionar(int lado1, int lado2, int lado3)
         {
             Triangulo triangulo = new Triangulo();
@@ -44,18 +45,25 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             return true;
         }
 
-        public bool Editar(int codigo, int lado1, int lado2, int lado3)
+        public int Editar(int codigo, int lado1, int lado2, int lado3)
         {
             Triangulo trianguloEditar = ObterPorCodigo(codigo);
+            Triangulo triangulo = new Triangulo();
+
+            triangulo.lado1 = lado1;
+            triangulo.lado2 = lado2;
+            triangulo.lado3 = lado3;
 
             if (trianguloEditar == null)
-                return false;
+                return 0;
 
-            trianguloEditar.lado1 = lado1;
-            trianguloEditar.lado2 = lado2;
-            trianguloEditar.lado3 = lado3;
+            else if (triangulo.ValidarTriangulo() == true)
+            {
+                trianguloEditar = triangulo;
+                return 2;
+            }
 
-            return true;
+            return 1;
         }
 
         public bool Apagar(int codigo)
@@ -70,10 +78,9 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             return false;
         }
 
-        public List<Triangulo> ObterTodos(int codigo)
+        public List<Triangulo> ObterTodos()
         {
             return triangulos;
         }
-
     }
 }

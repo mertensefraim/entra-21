@@ -8,7 +8,7 @@ namespace Entra21.ExemplosListas
 {
     internal class ProdutoControlador
     {
-        private ProdutoServico produtoServico = new ProdutoServico();
+        private ProdutoServico ProdutoServico = new ProdutoServico();
         public void GerenciarMenu()
         {
             int codigo = 0;
@@ -47,7 +47,6 @@ namespace Entra21.ExemplosListas
                 Console.ReadKey();
             }
         }
-
         private void ApresentarProduto()
         {
             ApresentarProdutos();
@@ -55,7 +54,7 @@ namespace Entra21.ExemplosListas
             Console.Write("Digite o código do produto a ser detalhado: ");
             var codigo = Convert.ToInt32(Console.ReadLine());
 
-            var produto = produtoServico.ObterPorCodigo(codigo);
+            var produto = ProdutoServico.ObterPorCodigo(codigo);
 
             // Verifica se o produto não está cadastrado na lista de produtos
 
@@ -74,7 +73,6 @@ Quantidade: {produto.Quantidade}
 Total: {produto.CalcularPrecoTotal()}");
                 
         }
-
         private void Apagar()
         {
             ApresentarProdutos();
@@ -82,7 +80,7 @@ Total: {produto.CalcularPrecoTotal()}");
             Console.WriteLine("Digite o código do produto para apagar: ");
             var codigo = Convert.ToInt32(Console.ReadLine());
 
-            var registroApagado = produtoServico.Apagar(codigo);
+            var registroApagado = ProdutoServico.Apagar(codigo);
 
             Console.WriteLine(registroApagado == true
                 ? "Registro removido com sucesso"
@@ -113,7 +111,7 @@ Total: {produto.CalcularPrecoTotal()}");
 
             var localizacaoProduto = ObterLocalizacaoProduto(localizacao);
 
-            var alterou = produtoServico.Editar(codigo, nome, precoUnitario, localizacaoProduto, quantidade);
+            var alterou = ProdutoServico.Editar(codigo, nome, precoUnitario, localizacaoProduto, quantidade);
 
             if (alterou == false)
             {
@@ -176,7 +174,7 @@ Total: {produto.CalcularPrecoTotal()}");
 
             var localizacaoProduto = ObterLocalizacaoProduto(localizacao);
 
-            produtoServico.Adicionar(nome, precoUnitario, localizacaoProduto, quantidade);
+            ProdutoServico.Adicionar(nome, precoUnitario, localizacaoProduto, quantidade);
         }
         private ProdutoLocalizacao ObterLocalizacaoProduto(string localizacao)
         {
@@ -195,7 +193,7 @@ Total: {produto.CalcularPrecoTotal()}");
         }
         private void ApresentarProdutos()
         {
-            var produtos = produtoServico.ObterTodos();
+            var produtos = ProdutoServico.ObterTodos();
 
             if (produtos.Count == 0)
             {
