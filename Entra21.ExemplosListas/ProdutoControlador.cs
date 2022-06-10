@@ -34,20 +34,96 @@ namespace Entra21.ExemplosListas
                 else if (codigo == 3)
                 {
                     // Menu escolhido para editar produto
-                    // Editar();
+                    Editar();
                 }
                 else if (codigo == 4)
                 {
-                    // Apagar();
+                    Apagar();
                 }
                 else if (codigo == 5)
                 {
-                    // ApresentarProduto();
+                    ApresentarProduto();
                 }
-                Thread.Sleep(1000);
+                Console.ReadKey();
             }
         }
 
+        private void ApresentarProduto()
+        {
+            ApresentarProdutos();
+
+            Console.Write("Digite o código do produto a ser detalhado: ");
+            var codigo = Convert.ToInt32(Console.ReadLine());
+
+            var produto = produtoServico.ObterPorCodigo(codigo);
+
+            // Verifica se o produto não está cadastrado na lista de produtos
+
+            if (produto == null)
+            {
+                Console.WriteLine("Produto não cadastrado");
+
+                return;
+            }
+
+            Console.Clear();
+            Console.WriteLine($@"Código: {produto.Codigo}
+Nome: {produto.Nome}
+Preço unitário: {produto.PrecoUnitario}
+Quantidade: {produto.Quantidade}
+Total: {produto.CalcularPrecoTotal()}");
+                
+        }
+
+        private void Apagar()
+        {
+            ApresentarProdutos();
+
+            Console.WriteLine("Digite o código do produto para apagar: ");
+            var codigo = Convert.ToInt32(Console.ReadLine());
+
+            var registroApagado = produtoServico.Apagar(codigo);
+
+            Console.WriteLine(registroApagado == true
+                ? "Registro removido com sucesso"
+                : "Nenhum produto cadastrado com o código informado");
+        }
+        private void Editar()
+        {
+            ApresentarProdutos();
+
+            Console.Write("Código produto desejado: ");
+            var codigo = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Nome: ");
+            var nome = Console.ReadLine();
+
+            Console.Write("Quantidade: ");
+            var quantidade = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Preço unitário: ");
+            var precoUnitario = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(@"Localizações disponíveis:
+- Armazem
+- Area Venda
+- Loja");
+            Console.Write("Localização: ");
+            var localizacao = Console.ReadLine();
+
+            var localizacaoProduto = ObterLocalizacaoProduto(localizacao);
+
+            var alterou = produtoServico.Editar(codigo, nome, precoUnitario, localizacaoProduto, quantidade);
+
+            if (alterou == false)
+            {
+                Console.WriteLine("Código digitado não existe");
+            }
+            else
+            {
+                Console.WriteLine("Produto alterado com sucesso");
+            }
+        }
         private int ApresentarSolicitarMenu()
         {
             Console.WriteLine(@"MENU: 
@@ -62,7 +138,6 @@ namespace Entra21.ExemplosListas
 
             return codigo;
         }
-
         private int SolicitarCodigo()
         {
             int codigo = 0;
@@ -131,10 +206,10 @@ namespace Entra21.ExemplosListas
 
             for (var i = 0; i < produtos.Count; i++)
             {
-                var produtosAtual = produtos[i];
+                var produtoAtual = produtos[i];
 
-                Console.WriteLine($"Produto: {produtosAtual.Nome}" +
-                    $"\nPreço Unitário: {produtosAtual.PrecoUnitario}");
+                Console.WriteLine($"Código: {produtoAtual.Codigo}" +
+                    $"\nNome: {produtoAtual.Nome}\n");
             }
         }
     }
