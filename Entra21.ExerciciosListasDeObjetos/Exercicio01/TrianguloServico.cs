@@ -82,5 +82,19 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
         {
             return triangulos;
         }
+
+        public TipoTriangulo ObterTipoTriangulo()
+        {
+            Triangulo triangulo = new Triangulo();
+
+            if (triangulo.EhIsoceles() == true)
+                return TipoTriangulo.Isoceles;
+
+            else if (triangulo.EhEscaleno() == true)
+                return TipoTriangulo.Escaleno;
+
+            else
+                return TipoTriangulo.Equilatero;
+        }
     }
 }

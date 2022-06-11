@@ -50,10 +50,11 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 
             var obter = TrianguloServico.ObterPorCodigo(codigo);
 
-            Console.WriteLine($"\nLado 01: {obter.lado1}" +
+            Console.WriteLine($"Tipo: {obter.ObterTipoTriangulo()}" +
+                $"\nLado 01: {obter.lado1}" +
                 $"\nLado 02: {obter.lado2}" +
                 $"\nLado 03: {obter.lado3}" +
-                $"\nCódigo: {codigo}");
+                $"\nCódigo: {codigo}\n");
         }
 
         private void Apagar()
@@ -90,8 +91,10 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 
             if (editar == 0)
                 Console.WriteLine("Não foi possível editar pois o código é inexiste ou os valores não podem formar um triângulo");
+
             else if (editar == 0)
                 Console.WriteLine("Os valores não podem formar um triângulo");
+
             else
                 Console.WriteLine("Produto alterado com sucesso");
         }
@@ -138,7 +141,8 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             for (var i = 0; i < triangulos.Count; i++)
             {
                 var trianguloAtual = triangulos[i];
-                Console.WriteLine($"Código: {trianguloAtual.Codigo}\n");
+                Console.WriteLine($"Tipo: {trianguloAtual.ObterTipoTriangulo()}" +
+                    $"\nCódigo: {trianguloAtual.Codigo}\n");
             }
 
         }
