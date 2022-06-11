@@ -11,7 +11,6 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
         public int lado1;
         public int lado2;
         public int lado3;
-        public string TipoTriangulo;
         public int Codigo;
 
         public bool ValidarTriangulo()

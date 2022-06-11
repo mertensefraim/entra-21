@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 {
-    internal enum TipoTriangulo
+    internal enum TrianguloTipo
     {
         Isoceles,
         Escaleno,
