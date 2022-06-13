@@ -36,7 +36,12 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
                 return false;
             }
 
-            ObterTipoTriangulo(lado1, lado2, lado3);
+            if (triangulo.EhEquilatero(lado1, lado2, lado3) == true)
+                triangulo.TipoTriangulo = TrianguloTipo.Equilatero;
+            else if (triangulo.EhEscaleno(lado1, lado2, lado3) == true)
+                triangulo.TipoTriangulo = TrianguloTipo.Escaleno;
+            else if (triangulo.EhIsoceles(lado1, lado2, lado3) == true)
+                triangulo.TipoTriangulo = TrianguloTipo.Isoceles;
 
             triangulo.Codigo = CodigoAtual;
             
@@ -45,18 +50,6 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             triangulos.Add(triangulo);
 
             return true;
-        }
-
-        public void ObterTipoTriangulo(int lado1, int lado2, int lado3)
-        {
-            Triangulo triangulo = new Triangulo();
-
-            if (triangulo.EhEquilatero(lado1, lado2, lado3) == true)
-                triangulo.TipoTriangulo = TrianguloTipo.Equilatero;
-            else if (triangulo.EhEscaleno(lado1, lado2, lado3) == true)
-                triangulo.TipoTriangulo = TrianguloTipo.Escaleno;
-            else if (triangulo.EhIsoceles(lado1, lado2, lado3) == true)
-                triangulo.TipoTriangulo = TrianguloTipo.Isoceles;
         }
 
         public int Editar(int codigo, int lado1, int lado2, int lado3)
