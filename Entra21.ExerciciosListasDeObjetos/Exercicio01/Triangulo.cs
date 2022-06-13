@@ -8,9 +8,10 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 {
     internal class Triangulo
     {
-        public int lado1;
-        public int lado2;
-        public int lado3;
+        public int Lado1;
+        public int Lado2;
+        public int Lado3;
+        public TrianguloTipo TipoTriangulo;
         public int Codigo;
 
         public bool ValidarTriangulo()
@@ -25,7 +26,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 
         private bool ValidarLado01()
         {
-            if (lado2 - lado3 < lado1 && lado1 < lado3 + lado3)
+            if (Lado2 - Lado3 < Lado1 && Lado1 < Lado3 + Lado3)
                 return true;
 
             return false;
@@ -33,7 +34,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
         
         private bool ValidarLado02()
         {
-            if (lado1 - lado3 < lado2 && lado2 < lado1 + lado3)
+            if (Lado1 - Lado3 < Lado2 && Lado2 < Lado1 + Lado3)
                 return true;
 
             return false;
@@ -41,13 +42,13 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
         
         private bool ValidarLado03()
         {
-            if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2)
+            if (Lado1 - Lado2 < Lado3 && Lado3 < Lado1 + Lado2)
                 return true;
 
             return false;
         }
         
-        public bool EhIsoceles()
+        public bool EhIsoceles(int lado1, int lado2, int lado3)
         {
             if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3)
             {
@@ -60,7 +61,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             return false;
         } 
         
-        public bool EhEscaleno()
+        public bool EhEscaleno(int lado1, int lado2, int lado3)
         {
             if (lado1 != lado2 && lado1 != lado3 && lado2 != lado3)
                 return true;
@@ -68,7 +69,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             return false;
         }
 
-        public bool EhEquilatero()
+        public bool EhEquilatero(int lado1, int lado2, int lado3)
         {
             if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3)
                 return true;

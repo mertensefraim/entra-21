@@ -27,14 +27,16 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
         {
             Triangulo triangulo = new Triangulo();
 
-            triangulo.lado1 = lado1;
-            triangulo.lado2 = lado2;
-            triangulo.lado3 = lado3;
+            triangulo.Lado1 = lado1;
+            triangulo.Lado2 = lado2;
+            triangulo.Lado3 = lado3;
 
             if (triangulo.ValidarTriangulo() == false)
             {
                 return false;
             }
+
+            ObterTipoTriangulo(lado1, lado2, lado3);
 
             triangulo.Codigo = CodigoAtual;
             
@@ -45,14 +47,26 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             return true;
         }
 
+        public void ObterTipoTriangulo(int lado1, int lado2, int lado3)
+        {
+            Triangulo triangulo = new Triangulo();
+
+            if (triangulo.EhEquilatero(lado1, lado2, lado3) == true)
+                triangulo.TipoTriangulo = TrianguloTipo.Equilatero;
+            else if (triangulo.EhEscaleno(lado1, lado2, lado3) == true)
+                triangulo.TipoTriangulo = TrianguloTipo.Escaleno;
+            else if (triangulo.EhIsoceles(lado1, lado2, lado3) == true)
+                triangulo.TipoTriangulo = TrianguloTipo.Isoceles;
+        }
+
         public int Editar(int codigo, int lado1, int lado2, int lado3)
         {
             Triangulo trianguloEditar = ObterPorCodigo(codigo);
             Triangulo triangulo = new Triangulo();
 
-            triangulo.lado1 = lado1;
-            triangulo.lado2 = lado2;
-            triangulo.lado3 = lado3;
+            triangulo.Lado1 = lado1;
+            triangulo.Lado2 = lado2;
+            triangulo.Lado3 = lado3;
 
             if (trianguloEditar == null)
                 return 0;

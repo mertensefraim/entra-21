@@ -50,10 +50,10 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
 
             var obter = TrianguloServico.ObterPorCodigo(codigo);
 
-            Console.WriteLine($"Tipo: {ObterTipoTriangulo()}" +
-                $"\nLado 01: {obter.lado1}" +
-                $"\nLado 02: {obter.lado2}" +
-                $"\nLado 03: {obter.lado3}" +
+            Console.WriteLine($"Tipo: {obter.TipoTriangulo}" +
+                $"\nLado 01: {obter.Lado1}" +
+                $"\nLado 02: {obter.Lado2}" +
+                $"\nLado 03: {obter.Lado3}" +
                 $"\nCódigo: {codigo}\n");
         }
 
@@ -141,7 +141,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
             for (var i = 0; i < triangulos.Count; i++)
             {
                 var trianguloAtual = triangulos[i];
-                Console.WriteLine($"Tipo: {ObterTipoTriangulo()}" +
+                Console.WriteLine($"Tipo: {trianguloAtual.TipoTriangulo}" +
                     $"\nCódigo: {trianguloAtual.Codigo}\n");
             }
 
@@ -182,19 +182,6 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio01
                 }
             }
             return codigo;
-        }
-
-        private TrianguloTipo ObterTipoTriangulo()
-        {
-            Triangulo triangulo = new Triangulo();
-
-            if (triangulo.EhIsoceles() == true)
-                return TrianguloTipo.Isoceles;
-
-            else if (triangulo.EhEquilatero() == true)
-                return TrianguloTipo.Equilatero;
-
-            return TrianguloTipo.Escaleno;
         }
     }
 }
