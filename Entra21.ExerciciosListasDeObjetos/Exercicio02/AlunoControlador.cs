@@ -146,7 +146,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio02
             ListarTodosOsAlunos();
 
             Console.WriteLine("Digite um nome: ");
-            var nome = Console.ReadLine().ToLower().Trim;
+            var nome = Console.ReadLine().ToLower().Trim();
 
             var apagou = AlunoServico.RemoverAluno(nome);
 
