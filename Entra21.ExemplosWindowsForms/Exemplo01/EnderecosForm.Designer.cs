@@ -79,6 +79,7 @@
             // 
             this.dataGridViewEnderecoes.AllowUserToAddRows = false;
             this.dataGridViewEnderecoes.AllowUserToDeleteRows = false;
+            this.dataGridViewEnderecoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewEnderecoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEnderecoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCodigo,
@@ -96,6 +97,7 @@
             // maskedTextBoxCep
             // 
             this.maskedTextBoxCep.Location = new System.Drawing.Point(847, 79);
+            this.maskedTextBoxCep.Mask = "99999-999";
             this.maskedTextBoxCep.Name = "maskedTextBoxCep";
             this.maskedTextBoxCep.Size = new System.Drawing.Size(100, 23);
             this.maskedTextBoxCep.TabIndex = 4;
@@ -156,6 +158,7 @@
             // 
             // comboBoxPacientes
             // 
+            this.comboBoxPacientes.DisplayMember = "Nome";
             this.comboBoxPacientes.FormattingEnabled = true;
             this.comboBoxPacientes.Location = new System.Drawing.Point(847, 167);
             this.comboBoxPacientes.Name = "comboBoxPacientes";
@@ -172,8 +175,10 @@
             // ColumnEnderecoCompleto
             // 
             this.ColumnEnderecoCompleto.HeaderText = "Endereço completo";
+            this.ColumnEnderecoCompleto.MinimumWidth = 40;
             this.ColumnEnderecoCompleto.Name = "ColumnEnderecoCompleto";
             this.ColumnEnderecoCompleto.ReadOnly = true;
+            this.ColumnEnderecoCompleto.Width = 300;
             // 
             // ColumnCep
             // 
