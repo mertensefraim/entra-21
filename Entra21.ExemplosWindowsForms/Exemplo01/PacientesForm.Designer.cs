@@ -59,7 +59,7 @@
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(679, 223);
+            this.buttonSalvar.Location = new System.Drawing.Point(920, 245);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(99, 29);
             this.buttonSalvar.TabIndex = 1;
@@ -80,7 +80,7 @@
             // LabelNome
             // 
             this.LabelNome.AutoSize = true;
-            this.LabelNome.Location = new System.Drawing.Point(457, 45);
+            this.LabelNome.Location = new System.Drawing.Point(698, 67);
             this.LabelNome.Name = "LabelNome";
             this.LabelNome.Size = new System.Drawing.Size(50, 20);
             this.LabelNome.TabIndex = 3;
@@ -89,7 +89,7 @@
             // labelAltura
             // 
             this.labelAltura.AutoSize = true;
-            this.labelAltura.Location = new System.Drawing.Point(457, 98);
+            this.labelAltura.Location = new System.Drawing.Point(698, 120);
             this.labelAltura.Name = "labelAltura";
             this.labelAltura.Size = new System.Drawing.Size(49, 20);
             this.labelAltura.TabIndex = 4;
@@ -98,7 +98,7 @@
             // labelPeso
             // 
             this.labelPeso.AutoSize = true;
-            this.labelPeso.Location = new System.Drawing.Point(457, 151);
+            this.labelPeso.Location = new System.Drawing.Point(698, 173);
             this.labelPeso.Margin = new System.Windows.Forms.Padding(0);
             this.labelPeso.Name = "labelPeso";
             this.labelPeso.Size = new System.Drawing.Size(39, 20);
@@ -107,21 +107,21 @@
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(457, 68);
+            this.textBoxNome.Location = new System.Drawing.Point(698, 90);
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(321, 27);
             this.textBoxNome.TabIndex = 6;
             // 
             // textBoxAltura
             // 
-            this.textBoxAltura.Location = new System.Drawing.Point(457, 121);
+            this.textBoxAltura.Location = new System.Drawing.Point(698, 143);
             this.textBoxAltura.Name = "textBoxAltura";
             this.textBoxAltura.Size = new System.Drawing.Size(321, 27);
             this.textBoxAltura.TabIndex = 7;
             // 
             // textBoxPeso
             // 
-            this.textBoxPeso.Location = new System.Drawing.Point(457, 174);
+            this.textBoxPeso.Location = new System.Drawing.Point(698, 196);
             this.textBoxPeso.Name = "textBoxPeso";
             this.textBoxPeso.Size = new System.Drawing.Size(321, 27);
             this.textBoxPeso.TabIndex = 8;
@@ -129,7 +129,7 @@
             // labelImc
             // 
             this.labelImc.AutoSize = true;
-            this.labelImc.Location = new System.Drawing.Point(457, 204);
+            this.labelImc.Location = new System.Drawing.Point(698, 226);
             this.labelImc.Name = "labelImc";
             this.labelImc.Size = new System.Drawing.Size(38, 20);
             this.labelImc.TabIndex = 9;
@@ -152,7 +152,7 @@
             this.dataGridViewInformacoes.RowHeadersWidth = 51;
             this.dataGridViewInformacoes.RowTemplate.Height = 29;
             this.dataGridViewInformacoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewInformacoes.Size = new System.Drawing.Size(439, 339);
+            this.dataGridViewInformacoes.Size = new System.Drawing.Size(680, 339);
             this.dataGridViewInformacoes.TabIndex = 10;
             // 
             // ColumnCodigo
@@ -200,7 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(798, 419);
+            this.ClientSize = new System.Drawing.Size(1038, 419);
             this.Controls.Add(this.dataGridViewInformacoes);
             this.Controls.Add(this.labelImc);
             this.Controls.Add(this.textBoxPeso);

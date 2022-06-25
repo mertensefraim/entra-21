@@ -89,13 +89,14 @@ namespace Entra21.ExemplosWindowsForms.Exemplo01
             // Veridica se o usuário escolheu realmente apagar o registro
             if (opcaoEscolhida == DialogResult.Yes)
             {
-                var indiceLinhaSelecionada = dataGridViewInformacoes.SelectedRows[0].Index;
+                var indiceLinhaSelecionada = dataGridViewInformacoes.SelectedRows[0];
+                var codigo = Convert.ToInt32(indiceLinhaSelecionada.Cells[0].Value);
 
                 // Remove a linha utilizando o indice do DataGriedView
-                dataGridViewInformacoes.Rows.RemoveAt(quantidadeLinhasSelecionadas);
+                dataGridViewInformacoes.Rows.RemoveAt(codigo - 1);
 
                 // Remove o paciente da lista de pacientes
-                pacientes.RemoveAt(quantidadeLinhasSelecionadas);
+                pacientes.RemoveAt(codigo - 1);
 
                 // Atualiza o arquivo com lista de pacientes sem o paciente removido
                 SalvarEmArquivo();
