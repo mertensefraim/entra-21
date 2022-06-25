@@ -215,6 +215,7 @@
             this.Name = "PacientesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro do Paciente";
+            this.Load += new System.EventHandler(this.PacientesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInformacoes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
