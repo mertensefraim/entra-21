@@ -62,7 +62,7 @@ namespace Entra21.ExerciciosListasDeObjetos.Exercicio02
 
         private void ListarMediaIdades()
         {
-            Console.WriteLine($"A média das idades é {AlunoServico.ObterMediaIdades} anos");
+            Console.WriteLine($"A média das idades é {AlunoServico.ObterMediaIdades()} anos");
         }
 
         private void ListarStatusAlunoEspecifico()
