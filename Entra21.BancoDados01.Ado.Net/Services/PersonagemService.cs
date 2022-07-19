@@ -135,7 +135,7 @@ INNER JOIN editoras AS e ON(p.id_editora = e.id)";
                 // Instanciar a editora para poder armazenar o da editora
                 personagem.Editora = new Editora();
                 personagem.Editora.Id = Convert.ToInt32(registro["editora_id"]);
-                personagem.Editora.Nome = registro["editora_nome"].ToString();
+                personagem.Editora.Nome = registro["nome_editora"].ToString();
 
                 personagem.TipoPersonagem = new TipoPersonagem();
                 personagem.TipoPersonagem.Id = Convert.ToInt32(registro["tipo_personagem_id"]);
