@@ -1,4 +1,5 @@
-﻿using Entra21.BancoDados01.Ado.Net.DataBase;
+﻿
+using Entra21.BancoDados01.Ado.Net.DataBase;
 using Entra21.BancoDados01.Ado.Net.Models;
 using System.Data;
 
@@ -85,9 +86,11 @@ namespace Entra21.BancoDados01.Ado.Net.Services
 
             var comando = conexao.CreateCommand();
 
-            comando.CommandText = "SELECT id, nome, sigla FROM unidades_federativas;";
+            comando.CommandText = "SELECT id, nome, sigla FROM unidades_federativas";
 
             var tabelaEmMemoria = new DataTable();
+
+            tabelaEmMemoria.Load(comando.ExecuteReader());
             
             var unidadesFederativas = new List<UnidadeFederativa>();
 
@@ -96,6 +99,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
                 var registro = tabelaEmMemoria.Rows[i];
 
                 var unidadeFederativa = new UnidadeFederativa();
+                unidadeFederativa.Id = Convert.ToInt32(registro["id"]);
                 unidadeFederativa.Nome = registro["nome"].ToString();
                 unidadeFederativa.Sigla = registro["sigla"].ToString();
 

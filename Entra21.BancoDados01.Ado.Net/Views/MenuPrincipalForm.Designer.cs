@@ -31,6 +31,8 @@
             this.buttonEditoras = new System.Windows.Forms.Button();
             this.buttonPersonagens = new System.Windows.Forms.Button();
             this.buttonTiposPersonagem = new System.Windows.Forms.Button();
+            this.buttonCidades = new System.Windows.Forms.Button();
+            this.buttonUnidadesFederativas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonEditoras
@@ -62,11 +64,32 @@
             this.buttonTiposPersonagem.UseVisualStyleBackColor = true;
             this.buttonTiposPersonagem.Click += new System.EventHandler(this.buttonTiposPersonagem_Click);
             // 
+            // buttonCidades
+            // 
+            this.buttonCidades.Location = new System.Drawing.Point(323, 444);
+            this.buttonCidades.Name = "buttonCidades";
+            this.buttonCidades.Size = new System.Drawing.Size(305, 426);
+            this.buttonCidades.TabIndex = 4;
+            this.buttonCidades.Text = "Cidades";
+            this.buttonCidades.UseVisualStyleBackColor = true;
+            // 
+            // buttonUnidadesFederativas
+            // 
+            this.buttonUnidadesFederativas.Location = new System.Drawing.Point(12, 444);
+            this.buttonUnidadesFederativas.Name = "buttonUnidadesFederativas";
+            this.buttonUnidadesFederativas.Size = new System.Drawing.Size(305, 426);
+            this.buttonUnidadesFederativas.TabIndex = 3;
+            this.buttonUnidadesFederativas.Text = "Unidades Federativas";
+            this.buttonUnidadesFederativas.UseVisualStyleBackColor = true;
+            this.buttonUnidadesFederativas.Click += new System.EventHandler(this.buttonUnidadesFederativas_Click);
+            // 
             // MenuPrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 450);
+            this.ClientSize = new System.Drawing.Size(952, 888);
+            this.Controls.Add(this.buttonCidades);
+            this.Controls.Add(this.buttonUnidadesFederativas);
             this.Controls.Add(this.buttonTiposPersonagem);
             this.Controls.Add(this.buttonPersonagens);
             this.Controls.Add(this.buttonEditoras);
@@ -81,5 +104,7 @@
         private Button buttonEditoras;
         private Button buttonPersonagens;
         private Button buttonTiposPersonagem;
+        private Button buttonCidades;
+        private Button buttonUnidadesFederativas;
     }
 }
