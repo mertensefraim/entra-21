@@ -66,16 +66,17 @@
             // 
             // buttonCidades
             // 
-            this.buttonCidades.Location = new System.Drawing.Point(323, 444);
+            this.buttonCidades.Location = new System.Drawing.Point(480, 444);
             this.buttonCidades.Name = "buttonCidades";
             this.buttonCidades.Size = new System.Drawing.Size(305, 426);
             this.buttonCidades.TabIndex = 4;
             this.buttonCidades.Text = "Cidades";
             this.buttonCidades.UseVisualStyleBackColor = true;
+            this.buttonCidades.Click += new System.EventHandler(this.buttonCidades_Click);
             // 
             // buttonUnidadesFederativas
             // 
-            this.buttonUnidadesFederativas.Location = new System.Drawing.Point(12, 444);
+            this.buttonUnidadesFederativas.Location = new System.Drawing.Point(169, 444);
             this.buttonUnidadesFederativas.Name = "buttonUnidadesFederativas";
             this.buttonUnidadesFederativas.Size = new System.Drawing.Size(305, 426);
             this.buttonUnidadesFederativas.TabIndex = 3;

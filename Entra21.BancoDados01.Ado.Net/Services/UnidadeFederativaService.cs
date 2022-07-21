@@ -18,7 +18,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
 
             comando.ExecuteNonQuery();
 
-            comando.Connection.Close();
+            conexao.Close();
         }
 
         public void Cadastrar(UnidadeFederativa unidadesFederativas)
