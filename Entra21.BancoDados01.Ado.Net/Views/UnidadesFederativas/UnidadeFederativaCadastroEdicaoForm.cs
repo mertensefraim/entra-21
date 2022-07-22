@@ -64,12 +64,14 @@ namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
             if (textBoxNome.Text.Trim().Length < 4 || textBoxNome.Text.Trim().Length > 20)
             {
                 MessageBox.Show("A quantidade de caracteres do campo nome não é a correta");
+                textBoxNome.Focus();
                 return false;
             }
 
             if (textBoxSigla.Text.Trim().Length != 2)
             {
                 MessageBox.Show("O tamanho da sigla deve ser de 2 caracteres");
+                textBoxSigla.Focus();
                 return false;
             }
 

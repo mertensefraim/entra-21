@@ -98,5 +98,11 @@ namespace Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens
             AtualizarRegistrosDataGridView();
 
         }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            var menuPrincipal = new MenuPrincipalForm();
+            menuPrincipal.ShowDialog();
+        }
     }
 }

@@ -27,13 +27,15 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Cidades
             PreencherComboBoxUnidadeFederativa();
         }
 
-        public CidadeCadastroEdicaoForm(Cidade cidade)
+        public CidadeCadastroEdicaoForm(Cidade cidade) : this()
         {
             _idParaEditar = cidade.Id;
 
             textBoxNome.Text = cidade.Nome;
-            maskedTextBoxPib.Text = cidade.Pib.ToString();
-            dateTimePickerDataHoraFundacao.Value = cidade.DataHoraFundacao;
+            textBoxPib.Text = cidade.Pib.ToString();
+            dateTimePickerDataFundacao.Value = cidade.DataHoraFundacao;
+            dateTimePickerHoraDeFundacao.Value = Convert.ToDateTime(cidade.DataHoraFundacao.ToString("HH:mm:ss"));
+            textBoxQuantidadeHabitantes.Text = cidade.QuantidadeHabitantes.ToString();
 
             for (int i = 0; i < comboBoxUnidadeFederativa.Items.Count; i++)
             {
@@ -49,25 +51,24 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Cidades
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            if (comboBoxUnidadeFederativa.SelectedIndex == -1)
-            {
-                MessageBox.Show("Selecione uma unidade federativa");
-                return;
-            }
-
             var unidadeFederativa = comboBoxUnidadeFederativa.SelectedItem as UnidadeFederativa;
 
+            if (ValidarCampos() == false)
+                return;
+
             var cidade = new Cidade();
-            cidade.Nome = textBoxNome.Text;
+            cidade.Nome = textBoxNome.Text.Trim();
             cidade.UnidadeFederativa = unidadeFederativa;
-            cidade.Pib = Convert.ToDecimal(maskedTextBoxPib.Text);
-            cidade.DataHoraFundacao = Convert.ToDateTime(dateTimePickerDataHoraFundacao);
+            cidade.Pib = Convert.ToDecimal(textBoxPib.Text.Trim().Replace(".", ","));
+            cidade.DataHoraFundacao = Convert.ToDateTime(dateTimePickerDataFundacao.Value.Date.ToString("dd/MM/yyyy") + " " + dateTimePickerHoraDeFundacao.Value.TimeOfDay);
+            cidade.QuantidadeHabitantes = Convert.ToInt32(textBoxQuantidadeHabitantes.Text.Trim());
 
             if (_idParaEditar == -1)
             {
                 _CidadeService.Cadastrar(cidade);
 
                 MessageBox.Show("Cidade cadastrada com sucesso");
+                Close();
             }
             else
             {
@@ -95,6 +96,62 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Cidades
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private bool ValidarCampos()
+        {
+            if (textBoxNome.Text.Trim().Length > 50 || textBoxNome.Text.Trim().Length < 3)
+            {
+                MessageBox.Show("O nome deve ter mais de 3 caracteres e menos de 50");
+                textBoxNome.Focus();
+                return false;
+            }
+
+            if (comboBoxUnidadeFederativa.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione uma unidade federativa");
+                comboBoxUnidadeFederativa.DroppedDown = true;
+                return false;
+            }
+
+            try
+            {
+                Convert.ToDecimal(textBoxPib.Text.Trim().Replace(".", ","));
+
+                if (textBoxPib.Text.Length > 15)
+                {
+                    MessageBox.Show("O valor do PIB não pode ser maior que 999999999999,99");
+                    textBoxPib.Focus();
+                    return false;
+                }
+
+                else if (textBoxPib.Text.Contains("-"))
+                {
+                    MessageBox.Show("O valor do PIB não pode ser negativo");
+                    textBoxPib.Focus();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("O valor do PIB deve ser um decimal válido");
+                textBoxPib.Focus();
+                return false;
+            }
+
+            try
+            {
+                Convert.ToInt32(textBoxQuantidadeHabitantes.Text);
+            }
+            catch
+            {
+                MessageBox.Show("O valor de habitantes deve ser um decimal válido");
+                textBoxQuantidadeHabitantes.Focus();
+                return false;
+            }
+
+
+            return true;
         }
     }
 }

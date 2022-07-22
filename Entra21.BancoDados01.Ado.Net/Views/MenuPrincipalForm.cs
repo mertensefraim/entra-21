@@ -35,13 +35,15 @@ namespace Entra21.BancoDados01.Ado.Net.Views
 
         private void buttonUnidadesFederativas_Click(object sender, EventArgs e)
         {
-            var unidadesFederativas = new UnidadeFederativaListagemForm();
+            WindowState = FormWindowState.Minimized;
+            var unidadesFederativas = new UnidadeFederativaListagemForm(this);
             unidadesFederativas.ShowDialog();
         }
 
         private void buttonCidades_Click(object sender, EventArgs e)
         {
-            var cidades = new CidadeListagemForm();
+            WindowState = FormWindowState.Minimized;
+            var cidades = new CidadeListagemForm(this);
             cidades.ShowDialog();
         }
     }

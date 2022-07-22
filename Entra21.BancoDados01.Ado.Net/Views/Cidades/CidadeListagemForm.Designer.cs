@@ -39,12 +39,13 @@
             this.ColumnPib = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSiglaEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCadastrar
             // 
-            this.buttonCadastrar.Location = new System.Drawing.Point(852, 8);
+            this.buttonCadastrar.Location = new System.Drawing.Point(1385, 8);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(94, 29);
             this.buttonCadastrar.TabIndex = 9;
@@ -54,7 +55,7 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(752, 8);
+            this.buttonEditar.Location = new System.Drawing.Point(1285, 8);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(94, 29);
             this.buttonEditar.TabIndex = 8;
@@ -64,7 +65,7 @@
             // 
             // buttonApagar
             // 
-            this.buttonApagar.Location = new System.Drawing.Point(652, 8);
+            this.buttonApagar.Location = new System.Drawing.Point(1185, 8);
             this.buttonApagar.Name = "buttonApagar";
             this.buttonApagar.Size = new System.Drawing.Size(94, 29);
             this.buttonApagar.TabIndex = 7;
@@ -89,42 +90,47 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Red;
             this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(934, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(1467, 413);
             this.dataGridView1.TabIndex = 6;
             // 
             // ColumnId
             // 
+            this.ColumnId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ColumnId.HeaderText = "Id";
             this.ColumnId.MinimumWidth = 6;
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
-            this.ColumnId.Width = 125;
+            this.ColumnId.Width = 51;
             // 
             // ColumnNome
             // 
+            this.ColumnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.ColumnNome.HeaderText = "Nome";
             this.ColumnNome.MinimumWidth = 6;
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 125;
+            this.ColumnNome.Width = 79;
             // 
             // ColumnQuantidadeHabitantes
             // 
+            this.ColumnQuantidadeHabitantes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColumnQuantidadeHabitantes.HeaderText = "Habitantes";
             this.ColumnQuantidadeHabitantes.MinimumWidth = 6;
             this.ColumnQuantidadeHabitantes.Name = "ColumnQuantidadeHabitantes";
             this.ColumnQuantidadeHabitantes.ReadOnly = true;
-            this.ColumnQuantidadeHabitantes.Width = 125;
+            this.ColumnQuantidadeHabitantes.Width = 110;
             // 
             // ColumnDataDeFundacao
             // 
-            this.ColumnDataDeFundacao.HeaderText = "Data de funcação";
-            this.ColumnDataDeFundacao.MinimumWidth = 6;
+            this.ColumnDataDeFundacao.HeaderText = "Data de fundação";
+            this.ColumnDataDeFundacao.MinimumWidth = 200;
             this.ColumnDataDeFundacao.Name = "ColumnDataDeFundacao";
             this.ColumnDataDeFundacao.ReadOnly = true;
-            this.ColumnDataDeFundacao.Width = 125;
+            this.ColumnDataDeFundacao.Width = 500;
             // 
             // ColumnPib
             // 
@@ -132,7 +138,7 @@
             this.ColumnPib.MinimumWidth = 6;
             this.ColumnPib.Name = "ColumnPib";
             this.ColumnPib.ReadOnly = true;
-            this.ColumnPib.Width = 125;
+            this.ColumnPib.Width = 300;
             // 
             // ColumnEstado
             // 
@@ -140,27 +146,40 @@
             this.ColumnEstado.MinimumWidth = 6;
             this.ColumnEstado.Name = "ColumnEstado";
             this.ColumnEstado.ReadOnly = true;
-            this.ColumnEstado.Width = 125;
+            this.ColumnEstado.Width = 200;
             // 
             // ColumnSiglaEstado
             // 
+            this.ColumnSiglaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColumnSiglaEstado.HeaderText = "Sigla do Estado";
             this.ColumnSiglaEstado.MinimumWidth = 6;
             this.ColumnSiglaEstado.Name = "ColumnSiglaEstado";
             this.ColumnSiglaEstado.ReadOnly = true;
-            this.ColumnSiglaEstado.Width = 125;
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Location = new System.Drawing.Point(12, 8);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(306, 29);
+            this.buttonMenu.TabIndex = 10;
+            this.buttonMenu.Text = "Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // CidadeListagemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 469);
+            this.ClientSize = new System.Drawing.Size(1491, 469);
+            this.Controls.Add(this.buttonMenu);
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonApagar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "CidadeListagemForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listagem cidades";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CidadeListagemForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -179,5 +198,6 @@
         private DataGridViewTextBoxColumn ColumnPib;
         private DataGridViewTextBoxColumn ColumnEstado;
         private DataGridViewTextBoxColumn ColumnSiglaEstado;
+        private Button buttonMenu;
     }
 }

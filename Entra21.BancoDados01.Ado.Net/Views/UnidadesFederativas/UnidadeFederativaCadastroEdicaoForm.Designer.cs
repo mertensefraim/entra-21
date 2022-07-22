@@ -83,6 +83,7 @@
             // 
             // textBoxSigla
             // 
+            this.textBoxSigla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxSigla.Location = new System.Drawing.Point(12, 108);
             this.textBoxSigla.Name = "textBoxSigla";
             this.textBoxSigla.Size = new System.Drawing.Size(309, 27);

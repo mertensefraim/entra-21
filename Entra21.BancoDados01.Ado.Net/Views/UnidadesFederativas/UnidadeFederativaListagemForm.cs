@@ -1,26 +1,19 @@
-﻿using Entra21.BancoDados01.Ado.Net.Models;
-using Entra21.BancoDados01.Ado.Net.Services;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Entra21.BancoDados01.Ado.Net.Services;
 
 namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
 {
     public partial class UnidadeFederativaListagemForm : Form
     {
-        internal readonly UnidadeFederativaService _UnidadeFederativaService;
+        internal readonly UnidadeFederativaService _unidadeFederativaService;
+        internal readonly MenuPrincipalForm _menuPrincipalForm;
 
-        public UnidadeFederativaListagemForm()
+        public UnidadeFederativaListagemForm(MenuPrincipalForm menuPrincipalForm)
         {
             InitializeComponent();
 
-            _UnidadeFederativaService = new UnidadeFederativaService();
+            _menuPrincipalForm = menuPrincipalForm;
+
+            _unidadeFederativaService = new UnidadeFederativaService();
 
             AtualizarECadastrarDadosDataGridView();
         }
@@ -31,11 +24,25 @@ namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            _UnidadeFederativaService.Apagar(id);
+            var resposta = MessageBox.Show($"Deseja realmente apagar a unidade Federativa com ID igual {id}", "Aviso", MessageBoxButtons.YesNo);
 
-            AtualizarECadastrarDadosDataGridView();
+            if(resposta == DialogResult.No)
+            {
+                return;
+            }
 
-            MessageBox.Show("Registro apagado com sucesso!");
+            try
+            {
+                _unidadeFederativaService.Apagar(id);
+
+                AtualizarECadastrarDadosDataGridView();
+
+                MessageBox.Show("Registro apagado com sucesso!");
+            }
+            catch
+            {
+                MessageBox.Show("Não foi possível apagar essa unidade federativa, pois ela está sendo utilizada em alguma cidade");
+            }
         }
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
@@ -52,7 +59,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
 
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-            var unidadeFederativa = _UnidadeFederativaService.ObterPorId(id);
+            var unidadeFederativa = _unidadeFederativaService.ObterPorId(id);
 
             var unidadeFederativaForm = new UnidadeFederativaCadastroEdicaoForm(unidadeFederativa);
             unidadeFederativaForm.ShowDialog();
@@ -62,7 +69,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
 
         private void AtualizarECadastrarDadosDataGridView()
         {
-            var unidadesFederativas = _UnidadeFederativaService.ObterTodos();
+            var unidadesFederativas = _unidadeFederativaService.ObterTodos();
 
             dataGridView1.Rows.Clear();
 
@@ -76,6 +83,17 @@ namespace Entra21.BancoDados01.Ado.Net.Views.UnidadesFederativas
                     unidadeFederativa.Sigla
                 });
             }
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            Close();
+            _menuPrincipalForm.WindowState = FormWindowState.Normal;
+        }
+
+        private void UnidadeFederativaListagemForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _menuPrincipalForm.WindowState = FormWindowState.Normal;
         }
     }
 }

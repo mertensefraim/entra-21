@@ -91,7 +91,7 @@ namespace Entra21.BancoDados01.Ado.Net.Services
             cidade.Nome = registro["nome"].ToString();
             cidade.QuantidadeHabitantes = Convert.ToInt32(registro["quantidade_habitantes"]);
             cidade.DataHoraFundacao = Convert.ToDateTime(registro["data_hora_fundacao"]);
-            cidade.Pib = Convert.ToDecimal("pib");
+            cidade.Pib = Convert.ToDecimal(registro["pib"]);
 
             conexao.Close();
 
@@ -133,7 +133,7 @@ INNER JOIN unidades_federativas AS uf ON(c.id_unidade_federativa = uf.id)";
                 cidade.Nome = registro["nome"].ToString();
                 cidade.QuantidadeHabitantes = Convert.ToInt32(registro["quantidade_habitantes"]);
                 cidade.DataHoraFundacao = Convert.ToDateTime(registro["data_hora_fundacao"]);
-                cidade.Pib = Convert.ToDecimal("pib");
+                cidade.Pib = Convert.ToDecimal(registro["pib"]);
 
                 cidade.UnidadeFederativa = new UnidadeFederativa();
                 cidade.UnidadeFederativa.Id = Convert.ToInt32(registro["id_uf"]);

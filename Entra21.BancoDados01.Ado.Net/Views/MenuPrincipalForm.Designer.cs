@@ -39,7 +39,7 @@
             // 
             this.buttonEditoras.Location = new System.Drawing.Point(12, 12);
             this.buttonEditoras.Name = "buttonEditoras";
-            this.buttonEditoras.Size = new System.Drawing.Size(305, 426);
+            this.buttonEditoras.Size = new System.Drawing.Size(305, 134);
             this.buttonEditoras.TabIndex = 0;
             this.buttonEditoras.Text = "Editoras";
             this.buttonEditoras.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             this.buttonPersonagens.Location = new System.Drawing.Point(323, 12);
             this.buttonPersonagens.Name = "buttonPersonagens";
-            this.buttonPersonagens.Size = new System.Drawing.Size(305, 426);
+            this.buttonPersonagens.Size = new System.Drawing.Size(305, 134);
             this.buttonPersonagens.TabIndex = 1;
             this.buttonPersonagens.Text = "Personagens";
             this.buttonPersonagens.UseVisualStyleBackColor = true;
@@ -58,7 +58,7 @@
             // 
             this.buttonTiposPersonagem.Location = new System.Drawing.Point(634, 12);
             this.buttonTiposPersonagem.Name = "buttonTiposPersonagem";
-            this.buttonTiposPersonagem.Size = new System.Drawing.Size(305, 426);
+            this.buttonTiposPersonagem.Size = new System.Drawing.Size(305, 134);
             this.buttonTiposPersonagem.TabIndex = 2;
             this.buttonTiposPersonagem.Text = "Tipos de personagens";
             this.buttonTiposPersonagem.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // buttonCidades
             // 
-            this.buttonCidades.Location = new System.Drawing.Point(480, 444);
+            this.buttonCidades.Location = new System.Drawing.Point(479, 152);
             this.buttonCidades.Name = "buttonCidades";
-            this.buttonCidades.Size = new System.Drawing.Size(305, 426);
+            this.buttonCidades.Size = new System.Drawing.Size(305, 150);
             this.buttonCidades.TabIndex = 4;
             this.buttonCidades.Text = "Cidades";
             this.buttonCidades.UseVisualStyleBackColor = true;
@@ -76,9 +76,9 @@
             // 
             // buttonUnidadesFederativas
             // 
-            this.buttonUnidadesFederativas.Location = new System.Drawing.Point(169, 444);
+            this.buttonUnidadesFederativas.Location = new System.Drawing.Point(168, 152);
             this.buttonUnidadesFederativas.Name = "buttonUnidadesFederativas";
-            this.buttonUnidadesFederativas.Size = new System.Drawing.Size(305, 426);
+            this.buttonUnidadesFederativas.Size = new System.Drawing.Size(305, 150);
             this.buttonUnidadesFederativas.TabIndex = 3;
             this.buttonUnidadesFederativas.Text = "Unidades Federativas";
             this.buttonUnidadesFederativas.UseVisualStyleBackColor = true;
@@ -88,13 +88,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 888);
+            this.ClientSize = new System.Drawing.Size(952, 313);
             this.Controls.Add(this.buttonCidades);
             this.Controls.Add(this.buttonUnidadesFederativas);
             this.Controls.Add(this.buttonTiposPersonagem);
             this.Controls.Add(this.buttonPersonagens);
             this.Controls.Add(this.buttonEditoras);
             this.Name = "MenuPrincipalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipalForm";
             this.ResumeLayout(false);
 
